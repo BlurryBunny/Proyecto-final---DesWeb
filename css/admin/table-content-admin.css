@@ -1,0 +1,55 @@
+@import url(../general/root.css);
+
+.container-table{
+    position: relative;
+    align-items: center;
+    width: 75%;
+    height: calc(100% - 30%);
+    border: 1px solid red;
+    margin-top: 25px;
+    margin-left: 12.5%;
+}
+
+.content-table{
+    position: relative;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 1.9em;
+    width: 100%;
+    padding-top: 25px;
+    border-radius: 5px 5px 0 0;
+    box-shadow: 0 0 20px rgba(0,0,0, 0.15);
+    overflow: hidden;
+    padding-left: 25%;
+}
+
+.content-table thead tr{
+    background-color: var(--blue-cream);
+    color: var(--sand);
+    text-align: left;
+    font-weight: bold;
+    border-bottom: 2px solid var(--blue-strong);
+}
+
+.content-table th,
+.content-table td{
+    align-items: center;
+    padding: 12px 15px;
+}
+
+.content-table td{
+    max-width: 225px;
+}
+
+.content-table tbody tr{
+    background-color: #f3f3f3 ;
+    border-bottom: 2px solid var(--blue-strong);
+}
+
+.content-table tbody tr:last-of-type{
+    border-bottom: 2px solid #009879;
+}
+.img-table{
+    height: 120px;
+    border-radius: 15px;
+}

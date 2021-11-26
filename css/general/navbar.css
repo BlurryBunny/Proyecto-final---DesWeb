@@ -1,0 +1,51 @@
+@import url(root.css);
+
+.navbar{
+    font-family: "Lithos Pro Regular";
+}
+.container-fluid{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--blue-cream);
+    z-index: 1;
+}
+
+.navbar-brand{
+    font-size: 28px;
+}
+
+.nav-item{
+    text-align: right;
+    width: 400px;
+    color: var(--sand);
+    padding-left: 20px;
+    font-size: 28px;
+}
+
+.nav-item:hover{
+    background-color: var(--blue-cream);
+}
+
+.nav-link{
+    color: var(--blue-medium);
+    transition: all 1s ease-in-out;
+}
+
+.nav-link:hover{
+    background-color: var(--blue-cream);
+    color: var(--blue-strong);
+    font-size: 32px;
+    transition: all 1s ease-in-out;
+}
+
+.nav-link.active{
+    text-decoration: underline;
+}
+
+.dropdown-menu{
+    position: absolute;
+    width: 150px;
+    float: right;
+}
+
