@@ -68,14 +68,14 @@ if( $_POST["txtName"]           != "" &&
             // Nota, te quedaste insertando la imagen que ya no tiene llave, una vez que la llave esta guardada 
 
             //!important qry con imagen agregada
-            $qry =  "Update hormigas set id_user=". $txtIdUser.",name='".$txtName. "' ,family='" .$txtFamily. "' ,subfamily='".$txtSubfamily."' ,alimentation='".$txtAlimentation."' ,care='".$txtCare."' ,features='".$txtContent."' ,date_update='".$date. "' ,photo_ant='".$imagen."' ,photo_type='".$tipo."' where id_ant='".$txtIdAnt."'";        
+            $qry =  "Update ants set id_user=". $txtIdUser.",name='".$txtName. "' ,family='" .$txtFamily. "' ,subfamily='".$txtSubfamily."' ,alimentation='".$txtAlimentation."' ,care='".$txtCare."' ,features='".$txtContent."' ,date_update='".$date. "' ,photo_ant='".$imagen."' ,photo_type='".$tipo."' where id_ant=".$txtIdAnt;        
         }else{
             header("location:".$ruta."pages/admin/new-edit-hormiga.php?errNewAnt=4"); // lo que se adjunto no es una imagen 
         }
 
     }else{
         //!important qry sin imagen 
-        $qry =  "Update hormigas set id_user=". $txtIdUser." ,name='".$txtName. "' ,family='" .$txtFamily. "' ,subfamily='".$txtSubfamily."' ,alimentation='".$txtAlimentation."' ,care='".$txtCare."' ,features='".$txtContent."' ,date_update='".$date."' where id_ant=".$txtIdAnt;
+        $qry =  "Update ants set id_user=". $txtIdUser." ,name='".$txtName. "' ,family='" .$txtFamily. "' ,subfamily='".$txtSubfamily."' ,alimentation='".$txtAlimentation."' ,care='".$txtCare."' ,features='".$txtContent."' ,date_update='".$date."' where id_ant=".$txtIdAnt;
     }
 
     //We need to add everything to new ant
@@ -85,11 +85,11 @@ if( $_POST["txtName"]           != "" &&
     //agregar la imagen
     if(!mysqli_query($c,$qry)){
         echo "<h1>Error</h1>";
-        // header("location:".$ruta."pages/admin/new-edit-hormiga.php?updAnt=false&idAnt=".$txtIdAnt); // falla en consulta
+         header("location:".$ruta."pages/admin/new-edit-hormiga.php?updAnt=false&idAnt=".$txtIdAnt); // falla en consulta
     }
     mysqli_close($c);
     echo $txtName." <br>". $txtFamily ."<br> ".$txtSubfamily." <br>". $txtAlimentation."<br> ".$txtCare." <br>". $txtContent ."<br> ".$date." <br>". $txtIdAnt ."<br> ".$txtIdUser." <br>";
-    // header("location:".$ruta."pages/admin/new-edit-hormiga.php?updAnt=true"); // todo correcto return to ant
+    header("location:".$ruta."pages/admin/new-edit-hormiga.php?updAnt=true"); // todo correcto return to ant
 
     
 }else{

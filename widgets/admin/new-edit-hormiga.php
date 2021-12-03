@@ -98,7 +98,7 @@
                                     <div class="input-group">
                                         <?php
                                             if(isset($_GET["idAnt"]) && $_GET["idAnt"]!=""){
-                                                echo "<input type='text' name='txtFamily' id='txtFamily' class='form-control' placeholder='Chrematogaster' aria-label='Titulo' aria-describedby='basic-addon1' value='>".$data["family"]. "'>";
+                                                echo "<input type='text' name='txtFamily' id='txtFamily' class='form-control' placeholder='Chrematogaster' aria-label='Titulo' aria-describedby='basic-addon1' value='".$data["family"]. "'>";
                                             }else{
                                                 echo "<input type='text' name='txtFamily' id='txtFamily' class='form-control' placeholder='Chrematogaster' aria-label='Titulo' aria-describedby='basic-addon1'>";
                                             }
@@ -110,7 +110,7 @@
                                     <div class="input-group">
                                         <?php
                                             if(isset($_GET["idAnt"]) && $_GET["idAnt"]!=""){
-                                                echo "<input type='text' name='txtSubfamily' id='txtSubfamily' class='form-control' placeholder='invicta' aria-label='Titulo' aria-describedby='basic-addon1' value='>".$data["subfamily"]. "'>";
+                                                echo "<input type='text' name='txtSubfamily' id='txtSubfamily' class='form-control' placeholder='invicta' aria-label='Titulo' aria-describedby='basic-addon1' value='".$data["subfamily"]. "'>";
                                             }else{
                                                 echo "<input type='text' name='txtSubfamily' id='txtSubfamily' class='form-control' placeholder='invicta' aria-label='Titulo' aria-describedby='basic-addon1'>";
                                             }
@@ -226,18 +226,23 @@
 
                                         //para div con imagen se manda a llamar foto para cargar img
                                         echo"<div class='col-3'>
-                                                <img class='img-thumbnail rounded' width=200 id='antPhoto' src='../general/show-photo-ants.php?idAnt=".$_GET["idAnt"]."' alt='".$data['name'].">".
-                                            "</div>
+                                                    <label for='formFile' class='form-label'>Fotografia actual</label>
+                                                    <img class='img-thumbnail rounded' width=200 id='antPhoto' src='../general/show-photo-ants.php?idAnt=".$_GET["idAnt"]."' alt='".$data['name']."/>
+                                                
+                                            </div>
                                             <div class='col-1'></div>
                                             <div class='col-3 d-flex align-items-center'>
+                                                <div class='mb-3'>
+                                                    <label for='formFile' class='form-label'>Cambiar fotografia</label>
                                                     <input class='form-control' type='file' id='antPhoto' name='antPhoto'> 
+                                                </div>
                                             </div>
                                             
                                             ";
                                     }else{
                                         echo"<div class='col-6'>
                                                 <div class='mb-3'>
-                                                    <label for='formFile' class='form-label'>Agrega una Fotografia</label>
+                                                    <label for='formFile' class='form-label'>Elegir fotografia para posts</label>
                                                     <input class='form-control' type='file' id='antPhoto' name='antPhoto'>
                                                 </div>
                                             </div>";
@@ -253,13 +258,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="row mt-2">
+                <div class="row mt-5">
                     <div class="col-2"></div>
                     <div class="col-2">
                         <?php
                             //if we have values we need to return to the page ants when we click to cancel
                            if(isset($_GET["idAnt"]) && $_GET["idAnt"]!=""){
-                                echo "<a href='hormigas.php' id= 'btn-Cancelar class ='btn btn-primary' value='Cancelar'>Cancelar</a>";
+                                echo   "<a href='../../DB/hormigas.php' id='btn-Cancelar' class='btn btn-info' role='button'>Cancelar</a>";
                            }else{
                                 echo "<input type='reset' id='btn-Cancelar' class='btn btn-primary' value='Cancelar'> <br>";
                            }
@@ -270,8 +275,9 @@
                     <div class="col-2">
                         <input type='submit'  id='btn-Publicar' class='btn btn-primary' value= 'Publicar' >
                     </div>
-                    <div class="col-2"></div>
+                    <div class="col-2 mt-5"></div>
                 </div>
+                <div class="row mt-5"></div>
             </form>
         </section>
 

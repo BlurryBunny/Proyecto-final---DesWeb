@@ -20,6 +20,19 @@
             // if($_GET['err'] == "5") $msg = "No se ha podido crear tu cuenta, intenta nuevamente";
         }
 
+        //check if an ant is delete or not
+        if(isset($_GET['delAnt']) && $_GET['delAnt']!=""){
+            // if($_GET['err'] == "1") $msg = "Se debe utilizar el formulario de registro";
+            // if($_GET['err'] == "2") $msg = "Debes de rellena todos los campos del formulario para poder registrarte";
+            // if($_GET['err'] == "3") $msg = "Las contraseñas no coinciden";
+            // if($_GET['err'] == "4") $msg =  header("location:".$ruta."pages/general/logIn.php?err=4");
+            // if($_GET['err'] == "5") $msg = "No se ha podido crear tu cuenta, intenta nuevamente";
+        }
+
+        if(isset($_GET['updAnt']) && $_GET['updAnt']!=""){
+            if($_GET['updAnt'] == "true") $msg = "Que bueno, los cambios se guardaron correctamente";
+        }
+
         if(isset($_GET['newAnt']) && $_GET['newAnt']!=""){
             if($_GET['newAnt'] == "true"){
                 $msg = "Una nueva hormiga se ha registrado, gracias por tu aportacion";

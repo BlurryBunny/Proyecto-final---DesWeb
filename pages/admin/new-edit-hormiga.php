@@ -20,7 +20,13 @@
             if($_GET['errNewAnt'] == "4") $msg = "Lo que se adjunto no es una imagen";
             if($_GET['errNewAnt'] == "5") header("location:".$ruta."pages/admin/hormigas.php?newAnt=true");
         }
+
         
+        if(isset($_GET['updAnt']) && $_GET['updAnt']!=""){
+            if($_GET['updAnt'] == "true") $msg = header("location:".$ruta."pages/admin/hormigas.php?updAnt=true");
+            if($_GET['updAnt'] == "false") $msg = "Que mal, no pudismos hacer actualizar la informacion";
+        
+        }
 
         //widgets include
         include("../../widgets/web/header-pt1.php");
