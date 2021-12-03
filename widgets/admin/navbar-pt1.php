@@ -5,21 +5,21 @@
     </div>
     <ul class="nav-links">
       <li>
-        <a href="publicaciones-admin.html">
+        <a href="publicaciones.php">
           <i class='bx bx-receipt' ></i>
           <span class="link_name">Publicaciones</span>
         </a>
         <ul class="sub-menu blank">
-          <li><a class="link_name" href="publicaciones-admin.html">Publicaciones</a></li>
+          <li><a class="link_name" href="publicaciones.php">Publicaciones</a></li>
         </ul>
       </li>
       <li>
-        <a href="comentarios-admin.html">
+        <a href="comentarios.php">
           <i class='bx bx-message-dots' ></i>
           <span class="link_name">Comentarios</span>
         </a>
         <ul class="sub-menu blank">
-          <li><a class="link_name" href="comentarios-admin.html">Comentarios</a></li>
+          <li><a class="link_name" href="comentarios.php">Comentarios</a></li>
         </ul>
       </li>
       <li>
@@ -41,12 +41,12 @@
         </ul>
       </li>
       <li>
-        <a href="#">
+        <a href="usuarios.php">
           <i class='bx bx-user' ></i>
           <span class="link_name">Usuarios</span>
         </a>
         <ul class="sub-menu blank">
-          <li><a class="link_name" href="#">Usuarios</a></li>
+          <li><a class="link_name" href="usuarios.php">Usuarios</a></li>
         </ul>
       </li>
       <li>
