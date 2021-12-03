@@ -1,0 +1,44 @@
+@import url(root.css);
+
+.img-logo{
+    width: 90px;
+    height: 90px;
+}
+
+#navbar{
+    background-color: var(--blue-medium);
+}
+
+#container-all-page{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%)scale(1);
+    width: 75%;
+    align-items: center;
+    background: var(--blue-medium);
+    background-color: var(--blue-medium);
+    border-radius: 2.5%;
+}
+
+
+#container-my-content{
+    position: relative;
+    align-items: center;
+    width: 100%;
+}
+
+#btn-section{
+    align-items: center;
+    text-align: center;
+    width: 20%;
+}
+
+#btn-section span{
+    position: relative;
+    margin: 0 auto;
+}
+
+.form-label{
+    color: var(--sand);
+}

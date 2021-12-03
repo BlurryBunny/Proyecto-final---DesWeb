@@ -1,0 +1,51 @@
+@import url(root.css);
+@import url(form.css);
+
+#row-form-content{
+    height: 50px;
+    font-size: 30px;
+    font-style: bold;
+}
+
+#arrow-back{
+    text-decoration: none;
+    color: var(--blue-medium);
+}
+
+/* #ant-photo-db{
+    max-width: 150px;
+    max-height: 75px!important;
+    border-radius: 25px;
+} */
+
+#arrow-back:hover{
+    color: var(--blue-strong);
+}
+
+#txtTitulo{
+    background-color: var(--blue-cream);
+}
+
+#txtContent{
+    height: 150px;
+}
+
+.form-control{
+    background-color: var(--blue-cream);
+}
+
+.form-select{
+    background-color: var(--blue-cream);
+    color: var(--blue-medium);
+}
+
+
+#btn-Cancelar:hover{
+    background-color: var(--blue-medium);
+    color: var(--sand);
+}
+
+#btn-Publicar:hover{
+    background-color: var(--blue-medium);
+    color: var(--sand);
+}

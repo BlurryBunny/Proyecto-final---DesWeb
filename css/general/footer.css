@@ -1,0 +1,41 @@
+@import url(root.css);
+
+.circle-icon{
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    border: none;
+    color: var(--blue-cream);
+}
+
+.circle-icon .fab{
+    font-size: 15px;
+    color: var(--sand);
+    transition: all 0.4s;
+}
+
+.circle-icon:hover{
+    background-color: var(--blue-medium);
+}
+
+.circle-icon:hover .fab{ 
+    color: var(--blue-strong);
+}
+
+.container-footer ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+.container-footer ul li{
+    list-style: none;
+    float: left;  
+    text-transform:capitalize;
+    color: var(--sand);
+    text-align: center;
+    padding-left: 25px;
+    transition: all 0.4s;
+    font-size: 18px;
+    font-style: bold;
+    text-decoration: none;
+}

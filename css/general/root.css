@@ -1,0 +1,46 @@
+
+:root {
+    --blue-cream: #B2BCBB;
+    --pink-cream: #E0B4A4;
+    --blue-strong: #22404A;
+    --blue-medium: #4C6A78;
+    --blue-cream: #B2BCBB;
+    --green-cream: #BED0A6;
+    --sand: #E4DCCF;
+    --blue-strong-hsl: hsl(195, 37%, 21%);
+}
+
+/*scroll bar*/
+::-webkit-scrollbar {
+    width: 1.5em;
+}
+
+::-webkit-scrollbar-track{
+    background:var(--blue-cream);
+    border-radius: 100vw;
+    margin-block: .5em;
+}
+
+::-webkit-scrollbar-thumb{
+    background: var(--blue-strong);
+    border: .25em solid var(--blue-cream);
+    border-radius: 100vw;
+}
+
+
+.btn{
+    background-color: var(--blue-cream);
+    color: var(--blue-strong);
+    border: none;
+}
+
+.btn:hover{
+    background-color: var(--blue-strong);
+    color: var(--sand);   
+}
+
+/* .input-group{
+    height: 50px;
+    background-color: var(--blue-cream);
+    color: var(--blue-strong);
+} */

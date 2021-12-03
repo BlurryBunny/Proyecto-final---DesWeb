@@ -1,0 +1,20 @@
+@import url(root.css);
+@import url(form.css);
+
+#img-user{
+    position: relative;
+    max-width: 100%;
+    max-height: 150px!important;
+    border-radius: 50%;
+    background-color: var(--blue-cream);
+}
+
+.row-user-img{
+    align-items: center!important;
+}
+
+#input-form{
+    background-color: var(--blue-cream);
+    color: var(--blue-medium);
+    font-size: 15px;
+}

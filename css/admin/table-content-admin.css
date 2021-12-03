@@ -1,0 +1,36 @@
+@import url(../general/root.css);
+.table{
+    width: 100%;
+    text-align: center;
+}
+.table thead tr{
+    background-color: var(--blue-cream);
+    color: var(--sand);
+    text-align: left;
+    font-weight: bold;
+    border-bottom: 2px solid var(--blue-strong);
+}
+
+.table th,
+.table td{
+    align-items: center;
+    padding: 12px 15px;
+}
+
+.table td{
+    max-width: 225px;
+}
+
+.table tbody tr{
+    background-color: #f3f3f3 ;
+    border-bottom: 2px solid var(--blue-strong);
+}
+
+.table tbody tr:last-of-type{
+    border-bottom: 2px solid #009879;
+}
+
+.img-table{
+    height: 120px;
+    border-radius: 15px;
+}

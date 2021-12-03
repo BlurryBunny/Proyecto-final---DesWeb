@@ -1,0 +1,61 @@
+#header-page{
+    width: 101%;
+    height: 75px;
+    background-color: var(--blue-cream);
+    top: 0;
+    display: flex;
+    color: var(--blue-medium);
+}
+
+body{
+    background-color: var(--blue-strong);
+}
+
+#container-card-form{
+    margin-top: 25px;
+    background-color: var(--blue-medium);
+    border-radius: 25px;
+    color: var(--blue-strong);
+}
+
+.bx-arrow-back{
+    position: relative;
+    margin-top: 15px;
+    font-size: 50px;
+    margin-left: 25px;
+}
+
+#header-page h2{
+    position: relative;
+    margin-top: 15px;
+    font-size: 35px;
+}
+
+.btn{
+    height: 50px;
+    width: 100%;
+    font-size: 25px;
+    font-style: bold;
+    border-radius: 15px;
+}
+
+#btn-Cancelar{
+    background: var(--pink-cream);
+    color: var(--blue-medium);
+    border: 0!important;
+}
+
+#btn-Publicar{
+    background: var(--green-cream);
+    color: var(--blue-medium);
+    border: 0!important;
+}
+
+#separation{
+    height: 25px;
+}
+
+.form-label{
+    font-size: 25px;
+    font-style: bold;
+}

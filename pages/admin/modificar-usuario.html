@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modificar usuario</title>
+    <link rel="stylesheet" href="../../css/general/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/general/modificar-usuario.css">
+    <!-- Boxiocns CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script type="text/javascript">
+        function valida_Post(){
+            return true;
+        }
+    </script>
+</head>
+<body>
+        <section class="container-fluid" id="container-all-page">
+            <div class="row" id="header-page">
+                <div class="col-1"></div>
+                <div class="col-1">
+                    <i class='bx bx-arrow-back'></i>
+                </div>
+                <div class="col-3"></div>
+                <div class="col-7">
+                    <h2>Configuracion de perfil</h2>
+                </div>
+            </div>
+            <form action="#" enctype="multipart/form-data" class="form-post" method="POST" onsubmit="return valida_Post()">
+                <div class="row mt-3">
+                    <!-- separation -->
+                    <div class="col-1"></div>
+
+                    <!-- card content user information -->
+                    <div class="col-10">
+                        <div class="container-fluid" id="container-card-form">
+                            <div class="row" id="separation"></div>
+
+                                <!-- first row (img ) -->
+                                <div class="row mt-2">
+                                    <div class="col-5"></div>
+                                    <div class="col-2 row-user-img">
+                                        <img src="../../assets/imgs/logo-mexAnt.png" alt="img-user" id="img-user">
+                                    </div>
+                                    <div class="col-5"></div>
+                                </div>
+
+                                <!-- second row (btn change img) -->
+                                <div class="row mt-2">
+                                    <div class="col-5"></div>
+                                    <div class="col-2 ">
+                                        <input id="input-form" class="form-control" type="file" id="formFile">
+                                    </div>
+                                    <div class="col-5">
+                                        
+                                    </div>
+                                </div>
+
+                                <!-- third row (title username email) -->
+                                <div class="row mt-5">
+                                    <div class="col-1"></div>
+                                    <div class="col-4">
+                                        <h2>Nombre de usuario</h2>
+                                    </div>
+                                    <div class="col-2"></div>
+                                    <div class="col-4">
+                                        <h2>Email</h2>
+                                    </div>
+                                    <div class="col-1"></div>
+                                </div>
+
+                                 <!-- four row (inputs:  username email) -->
+                                <div class="row mt-2">
+                                    <div class="col-1"></div>
+                                    <div class="col-4">
+                                        <div class="input-group">
+                                            <input type="text" name="txtUsername" id="txtTitle" class="form-control" placeholder="Nombre de usuario" aria-label="Titulo" aria-describedby="basic-addon1">
+                                        </div>
+                                    </div>
+                                    <div class="col-2"></div>
+                                    <div class="col-4">
+                                        <div class="input-group">
+                                            <input type="text" name="txtEmail" id="txtTitle" class="form-control" placeholder="ejemplo@ejemplo.com" aria-label="Titulo" aria-describedby="basic-addon1">
+                                        </div>
+                                    </div>
+                                    <div class="col-1"></div>
+                                </div>
+
+                                 <!-- third row (title username email) -->
+                                 <div class="row mt-5">
+                                    <div class="col-1"></div>
+                                    <div class="col-4">
+                                        <h2>Contraseña</h2>
+                                    </div>
+                                    <div class="col-2"></div>
+                                    <div class="col-4">
+                                        <h2>Rol</h2>
+                                    </div>
+                                    <div class="col-1"></div>
+                                </div>
+
+                                 <!-- four row (inputs:  username email) -->
+                                <div class="row mt-2">
+                                    <div class="col-1"></div>
+                                    <div class="col-4">
+                                        <div class="input-group">
+                                            <input type="text" name="txtPassword" id="txtTitle" class="form-control" placeholder="***" aria-label="Titulo" aria-describedby="basic-addon1">
+                                        </div>
+                                    </div>
+                                    <div class="col-2"></div>
+                                    <div class="col-4">
+                                        <div class="input-group">
+                                            <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" >
+                                                <option selected value="Administrador">Administrador</option>
+                                                <option value="General">General</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-1"></div>
+                                </div>
+
+                            <div class="row mt-4" id="separation"></div>
+                        
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-2"></div>
+                    <div class="col-2">
+                        <input type="reset" id="btn-Cancelar" class="btn btn-primary" value="Cancelar"> <br>
+                    </div>
+                    <div class="col-4"></div>
+                    <div class="col-2">
+                        <input type="submit"  id="btn-Publicar" class="btn btn-primary" value= "Publicar" >
+                    </div>
+                    <div class="col-2"></div>
+                </div>
+            </form>
+        </section>
+
+
+  <script src="../../js/general/polyfill.js"></script>
+  <script type="text/javascript" src="../../js/general/jquery.js"></script>
+  <script type="text/javascript" src="../../js/general/bootstrap.min.js"></script>
+</body>
+</html>

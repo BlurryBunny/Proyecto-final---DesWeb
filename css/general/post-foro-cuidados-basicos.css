@@ -1,0 +1,26 @@
+@import url(root.css);
+@import url(form.css);
+
+#row-title{
+    height: 50px;
+    font-size: 30px;
+    font-style: bold;
+}
+
+#row-content{
+    height: 400px;
+    font-size: 25px;
+    font-style: normal;
+}
+
+#txtTitulo{
+    background-color: var(--blue-cream);
+}
+
+#txtContent{
+    background-color: var(--blue-cream);
+}
+
+.form-control{
+    background-color: var(--blue-cream);
+}

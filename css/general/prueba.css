@@ -1,0 +1,163 @@
+@import url(root.css);
+.table{
+    position: relative;
+    width: 75%;
+}
+
+select{
+    position: relative;
+    margin-left:15px ;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    outline: 0;
+    box-shadow: none;
+    border: 0!important;
+    background: var(--sand);
+    color: var(--blue-medium);
+    background-image: none;
+    border-radius: 5px;
+    width: 100%;
+    height: 40px;
+    font-size: 15px;
+    align-items: center;
+    text-align: center;
+}
+
+
+select::-ms-expand{
+    display: none;
+}
+
+.select{
+    position: relative;
+    display: flex;
+    line-height: 3;
+    background: var(--blue-medium);
+    overflow: hidden;
+    border: .5em;
+    padding-left: 10px;
+    flex:1;
+    cursor: pointer;
+    font-size: 35px;
+    padding-left: 25px;
+}
+
+.select::after{
+    content: '\25BC';
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    pointer-events: none;
+    transform: 0.5 all ease;
+}
+
+select:hover::after{
+    background-color: var(--blue-strong);
+    color: var(--sand);
+}
+
+#search-container{
+    display: block;
+    width: 400px;
+    height: 80px;
+}
+
+#search-container span{
+    position: relative;
+    top: 0;   
+}
+
+#searchbox{
+    display: flex;
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+
+#searchbox input,button{
+    width: 75%;
+    height: 40px;
+    border: 2px solid var(--blue-medium);
+    border-right: 0px;
+    padding:12px;
+    background: transparent;
+    color: var(--sand);
+    font-size: 15px;
+}
+
+#searchbox button{
+    height: 40px;
+    margin:0;
+    width: 25%;
+    background-color: var(--blue-medium);
+    color: var(--sand);
+    float: right;
+    border-left: 0px;
+    font-size: 30px;
+    padding: 0;
+}
+
+.btn-action{
+    width: 50px;
+    height: 50px;
+
+    border-radius: 50%;
+    background-color: transparent;
+    border: 0!important;
+    align-items: center;
+    transition: all 0.5 ease;
+}
+
+.btn-action i{
+    margin-left: -7px;
+    margin-top: -7px;
+    font-size: 40px;
+    color: var(--blue-medium);
+  }
+  
+  .btn-action:hover{
+    background: var(--blue-strong);
+  }
+
+#icon-span-btn{
+    display: flex;
+    width: 300px;
+}
+
+#icon-span-btn span{
+    width: 200px;
+    font-size: 10px;
+    font-style: bold;
+    text-align: center;
+    margin-left: 15px;
+}
+
+.btn-action:hover i{
+    color: var(--sand);
+}
+
+.table{
+    width: 100%;
+}
+
+#btn-add-post i{
+    font-size: 20px;
+    font-style: bold;
+}
+
+#btn-add-post{
+    background-color: var(--sand);
+    color: var(--blue-medium);
+
+    border: 1px solid var(--blue-medium);
+}
+
+#btn-add-post:hover{
+    background-color: var(--blue-medium);
+    color: var(--sand);
+}
