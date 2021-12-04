@@ -13,13 +13,13 @@
             <?php
                 // significa que se va a modificar una hormiga
                 //validacion y verificacion
-                if(isset($_GET["idAnt"]) && $_GET["idAnt"]!=""){
+                if(isset($_GET["idState"]) && $_GET["idState"]!=""){
 
                     //establecer la conexión a la DB
                     $conn = connectDB();
 
                     //crear la consulta a la SQL a la DB
-                    $consulta = "select * from ants where id_ant= ".$_GET["idAnt"];
+                    $consulta = "select * from states where id_state= ".$_GET["idState"];
 
                     // ejecuta una consulta en la DB
                     $rs = mysqli_query($conn, $consulta);

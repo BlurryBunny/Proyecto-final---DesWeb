@@ -20,6 +20,6 @@ if($_GET["idState"]){
     $qry = "delete from states where id_state=" .$_GET["idState"];
     mysqli_query($c,$qry);
     mysqli_close($c);
-    header("location:".$ruta."pages/admin/estados.php?delAnt=true");//no se ha iniciado sesion todavia
+    header("location:".$ruta."pages/admin/estados.php?delState=true");//no se ha iniciado sesion todavia
 }
 ?>
