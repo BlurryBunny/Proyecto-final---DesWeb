@@ -97,8 +97,8 @@
                     <div class="col-2">
                     <?php
                             //if we have values we need to return to the page ants when we click to cancel
-                           if(isset($_GET["idAnt"]) && $_GET["idAnt"]!=""){
-                                echo   "<a href='../../DB/estados.php' id='btn-Cancelar' class='btn btn-info' role='button'>Cancelar</a>";
+                           if(isset($_GET["idState"]) && $_GET["idState"]!=""){
+                                echo   "<a href='../../admin/estados.php' id='btn-Cancelar' class='btn btn-info' role='button'>Cancelar</a>";
                            }else{
                                 echo "<input type='reset' id='btn-Cancelar' class='btn btn-primary' value='Cancelar'> <br>";
                            }
