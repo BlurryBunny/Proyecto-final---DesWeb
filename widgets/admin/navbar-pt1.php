@@ -32,6 +32,15 @@
         </ul>
       </li>
       <li>
+        <a href="hormigas-por-estado.php">
+          <i class='bx bx-data'></i>
+          <span class="link_name">Hormigas por Estado</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="hormigas-por-estado.php">Hormigas por Estado</a></li>
+        </ul>
+      </li>
+      <li>
         <a href="hormigas.php">
           <i class='bx bx-bug-alt'></i>
           <span class="link_name">Hormigas</span>

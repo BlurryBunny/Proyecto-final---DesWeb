@@ -2,7 +2,7 @@
             <div class="row" id="header-page">
                 <div class="col-1"></div>
                 <div class="col-1">
-                    <i class='bx bx-arrow-back'></i>
+                    <a href="estados.php" id="arrow-back"><i class='bx bx-arrow-back'></i></a>
                 </div>
                 <div class="col-3"></div>
                 <div class="col-7">
@@ -52,7 +52,6 @@
                 }
             ?>
 
-            <form action="#" enctype="multipart/form-data" class="form-post" method="POST" onsubmit="return valida_Post()">
                 <div class="row mt-3">
                     <div class="col-1"></div>
                     <div class="col-10">
@@ -96,8 +95,15 @@
                 <div class="row mt-5">
                     <div class="col-2"></div>
                     <div class="col-2">
-                        <input type="reset" id="btn-Cancelar" class="btn btn-primary" value="Cancelar"> <br>
-                    </div>
+                    <?php
+                            //if we have values we need to return to the page ants when we click to cancel
+                           if(isset($_GET["idAnt"]) && $_GET["idAnt"]!=""){
+                                echo   "<a href='../../DB/estados.php' id='btn-Cancelar' class='btn btn-info' role='button'>Cancelar</a>";
+                           }else{
+                                echo "<input type='reset' id='btn-Cancelar' class='btn btn-primary' value='Cancelar'> <br>";
+                           }
+                        ?>
+                                            </div>
                     <div class="col-4"></div>
                     <div class="col-2">
                         <input type="submit"  id="btn-Publicar" class="btn btn-primary" value= "Publicar" >

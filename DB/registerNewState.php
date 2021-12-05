@@ -27,7 +27,7 @@
                 
                 mysqli_close($c);
                 // echo $txtName." <br>". $txtFamily ."<br> ".$txtSubfamily." <br>". $txtAlimentation."<br> ".$txtCare." <br>". $txtContent ."<br> ".$date." <br>". $imagen;
-                header("location:".$ruta."pages/admin/new-edit-estados.php?newState=true"); // todo correcto return to ant
+                header("location:".$ruta."pages/admin/new-edit-estado.php?newState=true"); // todo correcto return to ant
         }else{
             header("location: ".$ruta."pages/admin/new-edit-estados.php?errNewState=2");
         }
