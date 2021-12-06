@@ -7,6 +7,38 @@
     font-style: bold;
 }
 
+#prueba{
+    border: 5px solid red;
+}
+
+#prueba-col{
+    border: 5px solid blue;
+}
+
+#container-comments{
+    max-height: 400px;
+}
+
+#list-comments{
+    height: 90%;
+    width: 100%;
+    display: block;
+    overflow-y: auto;
+    line-height: 1.5;
+}
+
+#list-comments p{
+    font-size: 32px;
+    color: var(--sand);
+    text-decoration: none;
+}
+
+#list-comments p.is-active{
+    color: var(--blue-strong);
+    font-weight: bold;
+}
+
+
 #arrow-back{
     text-decoration: none;
     color: var(--blue-medium);

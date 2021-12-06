@@ -7,21 +7,13 @@
       <li>
         <a href="publicaciones.php">
           <i class='bx bx-receipt' ></i>
-          <span class="link_name">Publicaciones</span>
+          <span class="link_name">Publicaciones y comentarios </span>
         </a>
         <ul class="sub-menu blank">
-          <li><a class="link_name" href="publicaciones.php">Publicaciones</a></li>
+          <li><a class="link_name" href="publicaciones.php">Publicaciones y comentarios</a></li>
         </ul>
       </li>
-      <li>
-        <a href="comentarios.php">
-          <i class='bx bx-message-dots' ></i>
-          <span class="link_name">Comentarios</span>
-        </a>
-        <ul class="sub-menu blank">
-          <li><a class="link_name" href="comentarios.php">Comentarios</a></li>
-        </ul>
-      </li>
+      
       <li>
         <a href="estados.php">
           <i class='bx bx-map-alt' ></i>

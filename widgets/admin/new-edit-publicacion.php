@@ -67,22 +67,22 @@
                                 <div class="col-3">
                                     <select class="form-select form-select-lg mb-3" id="typePost" name="typePost" aria-label=".form-select-lg example">
                                     <?php
-                                        if(isset($_POST["typePost"]) && $_POST["typePost"]!=""){
-                                            if($_POST["typePost"] == "Foro"){
+                                        if(isset($_GET["typePost"]) && $_GET["typePost"]!=""){
+                                            if($_GET["typePost"] == "Foro"){
                                                 echo "
                                                 <option  selected value='Foro'>Foro</option>
                                                 <option  value='Cuidados basicos'>Cuidados basicos</option>";
-                                            }else if($_POST["typePost"] == "Cuidados basicos"){
+                                            }else if($_GET["typePost"] == "Cuidados basicos"){
                                                 echo "
                                                 <option  value='Foro'>Foro</option>
                                                 <option selected value='Cuidados basicos'>Cuidados basicos</option>";
                                             }else{
-                                                echo "<option selected disabled>Sección</option>
+                                                echo "<option selected disabled>Tipo Post</option>
                                                 <option value='Foro'>Foro</option>
                                                 <option value='Cuidados basicos'>Cuidados basicos</option>";
                                             }
                                         }else{
-                                            echo "<option selected disabled>Sección</option>
+                                            echo "<option selected disabled>Tipo Post</option>
                                             <option value='Foro'>Foro</option>
                                             <option value='Cuidados basicos'>Cuidados basicos</option>";
                                         }
@@ -155,7 +155,7 @@
 
                                         //para div con imagen se manda a llamar foto para cargar img
                                         echo"<div class='col-3'>
-                                                    <label for='formFile' class='form-label'>Fotografia actual</label>
+                                                    <label for='formFile' class='form-label'>Fotografia actual</label><br>
                                                     <img class='img-thumbnail rounded' width=200 id='postPhoto' src='../general/show-photo-post.php?idPost=".$_GET["idPost"]."' alt='".$data['title']."/>
                                                 
                                             </div>

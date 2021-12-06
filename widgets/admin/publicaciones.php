@@ -127,14 +127,16 @@
                                                     }
                                                     echo "<td><span class='title-table'>".$datos["title"]."</span></td>";
                                                     echo "<td><span class='title-table'>
-                                                        <a href= 'new-edit-publicacion.php?idPost=".$datos["id_post"]."&typePost=".$_POST["typePost"]."' class='btn-action'><i class='bx bx-edit' ></i></button>
-                                                        <a href='../../DB/deletePost.php?idPost=".$datos["id_post"]."&typePost=".$_POST["typePost"]."' class='btn-action'><i class='bx bx-trash' ></i></button>
+                                                        <a href= 'new-edit-publicacion.php?idPost=".$datos["id_post"]."&typePost=".$datos["type_post"]."' class='btn-action'><i class='bx bx-edit' ></i></button>
+                                                        <a href='../../DB/deletePost.php?idPost=".$datos["id_post"]."&typePost=".$datos["type_post"]."' class='btn-action'><i class='bx bx-trash' ></i></button>
+                                                        <a href='view-comments.php?idPost=".$datos["id_post"]."&typePost=".$datos["type_post"]."' class='btn-action'><i class='bx bx-message-dots' ></i></button>
+                                                        
                                                         </span></td>";
                                                     echo "</tr>";
                                                 }else{
-                                                    echo "  <tr>
-                                                    <td><span class='title-table'>No hay datos en la base de datos</span></td>
-                                                    </tr>";
+                                                    // echo "  <tr>
+                                                    // <td><span class='title-table'>No hay datos en la base de datos</span></td>
+                                                    // </tr>";
                                                 }
                                             }
                                             
