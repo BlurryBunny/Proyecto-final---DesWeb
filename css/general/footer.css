@@ -5,24 +5,24 @@
     height: 75px;
     border-radius: 50%;
     border: none;
-    color: var(--blue-cream);
+    background-color: var(--blue-medium);
 }
 
 .circle-icon .fab{
-    font-size: 15px;
-    color: var(--sand);
+    font-size: 30px;
+    color: var(--blue-cream);
     transition: all 0.4s;
 }
 
 .circle-icon:hover{
-    background-color: var(--blue-medium);
+    background-color: var(--blue-strong);
 }
 
 .circle-icon:hover .fab{ 
-    color: var(--blue-strong);
+    color: var(--sand);
 }
 
-.container-footer ul {
+/* .container-footer ul {
     margin: 0px;
     padding: 0px;
 }
@@ -31,11 +31,37 @@
     list-style: none;
     float: left;  
     text-transform:capitalize;
-    color: var(--sand);
+    color: var(--blue-strong);
     text-align: center;
     padding-left: 25px;
     transition: all 0.4s;
     font-size: 18px;
     font-style: bold;
     text-decoration: none;
+}
+
+.container-footer ul li span{
+    font-size: 28px;
+    font-weight: bold;
+
+} */
+
+.span-info{
+    padding-left: 25px;
+    transition: 0.4s all ease;
+    font-size: 25px;
+    color: var(--blue-medium);
+    font-weight: normal;
+}
+
+.span-info:hover{
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--blue-strong);
+}
+
+
+footer{
+    height: 8%;
+    background-color: var(--blue-cream);
 }

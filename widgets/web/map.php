@@ -1,6 +1,53 @@
-<div class="content">
-        <div class="map" id="map">
-            <div class="map__image">
+
+    <div class="row" id="row-content">
+    
+        <div class="col-1" ></div>
+        <div class="col-3 mt-5" id="col-ref" >
+            <div class="container map__options mt-5">
+                <h1>Lista de estados</h1>
+                <div class="map__list">
+                    <ul>
+                        <li> <a href = "?state=agu" id= "list-AGU">Aguascalientes 		</a> </li>
+                        <li> <a href = "?state=bcn" id= "list-BCN">Baja California		</a> </li>
+                        <li> <a href = "?state=bcs" id= "list-BCS">Baja California Sur 	</a> </li>
+                        <li> <a href = "?state=cam" id= "list-CAM">Campeche 			    </a> </li>	
+                        <li> <a href = "?state=chp" id= "list-CHP">Chiapas 				</a> </li>
+                        <li> <a href = "?state=chh" id= "list-CHH">Chihuahua			    </a> </li>
+                        <li> <a href = "?state=coa" id= "list-COA">Coahuila			    </a> </li>	
+                        <li> <a href = "?state=col" id= "list-COL">Colima			        </a> </li>
+                        <li> <a href = "?state=df"  id= "list-DF">Distrito Federal 	    </a> </li>	
+                        <li> <a href = "?state=dur" id= "list-DUR">Durango 				</a> </li>
+                        <li> <a href = "?state=gua" id= "list-GUA">Guanajuato 			</a> </li>
+                        <li> <a href = "?state=gro" id= "list-GRO">Guerrero			    </a> </li>	
+                        <li> <a href = "?state=hid" id= "list-HID">Hidalgo				</a> </li>
+                        <li> <a href = "?state=jal" id= "list-JAL">Jalisco 				</a> </li>
+                        <li> <a href = "?state=mex" id= "list-MEX">México				    </a> </li>
+                        <li> <a href = "?state=mic" id= "list-MIC">Michoacán 			    </a> </li>
+                        <li> <a href = "?state=mor" id= "list-MOR">Morelos 				</a> </li>
+                        <li> <a href = "?state=na" id= "list-NA">Nayarit 				</a> </li>
+                        <li> <a href = "?state=nle" id= "list-NLE">Nuevo León 			</a> </li>
+                        <li> <a href = "?state=oax" id= "list-OAX">Oaxaca				    </a> </li>
+                        <li> <a href = "?state=pue" id= "list-PUE">Puebla 				</a> </li>
+                        <li> <a href = "?state=que" id= "list-QUE">Querétaro 			    </a> </li>
+                        <li> <a href = "?state=roo" id= "list-ROO">Quintana Roo 		    </a> </li>	
+                        <li> <a href = "?state=slp" id= "list-SLP">San Luis Potosí		</a> </li>
+                        <li> <a href = "?state=sin" id= "list-SIN">Sinaloa 			    </a> </li>
+                        <li> <a href = "?state=son" id= "list-SON">Sonora 				</a> </li>
+                        <li> <a href = "?state=tab" id= "list-TAB">Tabasco 				</a> </li>
+                        <li> <a href = "?state=tam" id= "list-TAM">Tamaulipas 			</a> </li>
+                        <li> <a href = "?state=tla" id= "list-TLA">Tlaxcala 			    </a> </li>	
+                        <li> <a href = "?state=ver" id= "list-VER">Veracruz 			    </a> </li>	
+                        <li> <a href = "?state=yuc" id= "list-YUC">Yucatán				</a> </li>
+                        <li> <a href = "?state=zac" id= "list-ZAC">Zacatecas		        </a> </li>	
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-1"></div>
+
+        <div class="col-6">
+            <div class=" container map__image">
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:amcharts="http://amcharts.com/ammap" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox = "0 0 795 550">
                     <g>
                         <a id="MX-AGU" xlink:title="Aguascalientes" 	    xlink:href="?state=agu "> 
@@ -102,46 +149,8 @@
                 </g>
                 </svg>
             </div>
-
-            <div class="map__options">
-                <h1>Lista de estados</h1>
-                <div class="map__list">
-                    <ul>
-                        <li> <a href = "?state=agu" id= "list-AGU">Aguascalientes 		</a> </li>
-                        <li> <a href = "?state=bcn" id= "list-BCN">Baja California		</a> </li>
-                        <li> <a href = "?state=bcs" id= "list-BCS">Baja California Sur 	</a> </li>
-                        <li> <a href = "?state=cam" id= "list-CAM">Campeche 			    </a> </li>	
-                        <li> <a href = "?state=chp" id= "list-CHP">Chiapas 				</a> </li>
-                        <li> <a href = "?state=chh" id= "list-CHH">Chihuahua			    </a> </li>
-                        <li> <a href = "?state=coa" id= "list-COA">Coahuila			    </a> </li>	
-                        <li> <a href = "?state=col" id= "list-COL">Colima			        </a> </li>
-                        <li> <a href = "?state=df"  id= "list-DF">Distrito Federal 	    </a> </li>	
-                        <li> <a href = "?state=dur" id= "list-DUR">Durango 				</a> </li>
-                        <li> <a href = "?state=gua" id= "list-GUA">Guanajuato 			</a> </li>
-                        <li> <a href = "?state=gro" id= "list-GRO">Guerrero			    </a> </li>	
-                        <li> <a href = "?state=hid" id= "list-HID">Hidalgo				</a> </li>
-                        <li> <a href = "?state=jal" id= "list-JAL">Jalisco 				</a> </li>
-                        <li> <a href = "?state=mex" id= "list-MEX">México				    </a> </li>
-                        <li> <a href = "?state=mic" id= "list-MIC">Michoacán 			    </a> </li>
-                        <li> <a href = "?state=mor" id= "list-MOR">Morelos 				</a> </li>
-                        <li> <a href = "?state=na" id= "list-NA">Nayarit 				</a> </li>
-                        <li> <a href = "?state=nle" id= "list-NLE">Nuevo León 			</a> </li>
-                        <li> <a href = "?state=oax" id= "list-OAX">Oaxaca				    </a> </li>
-                        <li> <a href = "?state=pue" id= "list-PUE">Puebla 				</a> </li>
-                        <li> <a href = "?state=que" id= "list-QUE">Querétaro 			    </a> </li>
-                        <li> <a href = "?state=roo" id= "list-ROO">Quintana Roo 		    </a> </li>	
-                        <li> <a href = "?state=slp" id= "list-SLP">San Luis Potosí		</a> </li>
-                        <li> <a href = "?state=sin" id= "list-SIN">Sinaloa 			    </a> </li>
-                        <li> <a href = "?state=son" id= "list-SON">Sonora 				</a> </li>
-                        <li> <a href = "?state=tab" id= "list-TAB">Tabasco 				</a> </li>
-                        <li> <a href = "?state=tam" id= "list-TAM">Tamaulipas 			</a> </li>
-                        <li> <a href = "?state=tla" id= "list-TLA">Tlaxcala 			    </a> </li>	
-                        <li> <a href = "?state=ver" id= "list-VER">Veracruz 			    </a> </li>	
-                        <li> <a href = "?state=yuc" id= "list-YUC">Yucatán				</a> </li>
-                        <li> <a href = "?state=zac" id= "list-ZAC">Zacatecas		        </a> </li>	
-                    </ul>
-                </div>
-            </div>
         </div>
 
+        <div class="col-1"></div>
+        
     </div>

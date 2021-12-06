@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 4.9.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 06-12-2021 a las 14:10:44
--- Versión del servidor: 10.4.21-MariaDB
--- Versión de PHP: 8.0.12
+-- Tiempo de generación: 07-12-2021 a las 00:22:52
+-- Versión del servidor: 10.3.16-MariaDB
+-- Versión de PHP: 7.3.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -90,8 +91,18 @@ CREATE TABLE `comments` (
 --
 
 INSERT INTO `comments` (`id_comment`, `id_post`, `id_user`, `content`, `date`) VALUES
-(1, 1, 1, 'hola esto es mi comentario', '2021-12-06'),
-(3, 1, 1, 'hey hey aqui estoy', '2021-12-06');
+(5, 1, 1, 'ola', '2021-12-06'),
+(6, 1, 1, 'ola', '2021-12-06'),
+(8, 1, 1, 'ala', '2021-12-06'),
+(9, 1, 1, 'aaaaaaaaaaaa', '2021-12-06'),
+(10, 1, 1, 'aaaaaaaaaaaa', '2021-12-06'),
+(11, 1, 1, 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', '2021-12-06'),
+(12, 1, 1, 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', '2021-12-06'),
+(13, 1, 1, 'dsfafafafafafafafafafafafafafafafafafafafafafafa', '2021-12-06'),
+(14, 1, 1, 'dsfafafafafafafafafafafafafafafafafafafafafafafa', '2021-12-06'),
+(16, 3, 1, 'hey hola', '2021-12-06'),
+(17, 2, 1, 'aaaaaaaaaaaaaa', '2021-12-06'),
+(18, 2, 1, 'mi comentario', '2021-12-06');
 
 -- --------------------------------------------------------
 
@@ -153,19 +164,21 @@ CREATE TABLE `users` (
   `name` varchar(100) NOT NULL,
   `password` varchar(100) NOT NULL,
   `rol` varchar(100) NOT NULL,
-  `email` varchar(100) NOT NULL
+  `email` varchar(100) NOT NULL,
+  `photo` longblob NOT NULL,
+  `type_photo` varchar(150) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `users`
 --
 
-INSERT INTO `users` (`id_user`, `name`, `password`, `rol`, `email`) VALUES
-(1, 'uli', 'uli', 'Administrador', 'ulises_champi@hotmail.com'),
-(2, 'nacho', 'nacho', 'General', 'nacho@nacho.com'),
-(3, 'mocte', 'mocte', 'General', 'CoChiCoriginal@gmail.com'),
-(4, 'mocte1', 'mocte', 'General', 'ulises_champi@hotmail.com'),
-(5, 'ulises', 'ulises', 'Administrador', 'CoChiCoriginal@gmail.com');
+INSERT INTO `users` (`id_user`, `name`, `password`, `rol`, `email`, `photo`, `type_photo`) VALUES
+(1, 'uli', 'uli', 'Administrador', 'ulises_champi@hotmail.com', '', ''),
+(3, 'mocte', 'mocte', 'General', 'CoChiCoriginal@gmail.com', '', ''),
+(5, 'ulises', 'ulises', 'Administrador', 'CoChiCoriginal@gmail.com', '', ''),
+(6, 'no es usuario', 'noescierto', 'Administrador', 'usuario@usuario.com', '', ''),
+(8, 'fer', 'fer', 'General', 'fer@fer.com', '', '');
 
 --
 -- Índices para tablas volcadas
@@ -233,7 +246,7 @@ ALTER TABLE `ants_in_states`
 -- AUTO_INCREMENT de la tabla `comments`
 --
 ALTER TABLE `comments`
-  MODIFY `id_comment` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_comment` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT de la tabla `posts`
@@ -251,7 +264,7 @@ ALTER TABLE `states`
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- Restricciones para tablas volcadas

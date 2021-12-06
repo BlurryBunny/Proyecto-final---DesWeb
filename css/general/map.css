@@ -6,7 +6,6 @@
 
 body{
     font-family: "Lithos Pro Regular";
-
 }
 
 /*navbar menu*/
@@ -59,16 +58,16 @@ body{
 }
 
 .content{
-    position: absolute;
-    top: 100px;
-    left: 0;
+    /* position: absolute;
+    
     width: 100%;
-    height: 80%;
+    height: 100%; */
     background-color: var(--blue-strong);
+    
     z-index: 0;
 }
 
-/*map style*/
+/* map style
 .map__image{
     position: absolute;
     height: 650px;
@@ -82,7 +81,7 @@ body{
     display: flex;
     border-radius: 25px;
 
-}
+} */
 
 .map__image svg{
     position: relative;
@@ -110,19 +109,17 @@ body{
 
 
 /*list style*/
-.map__options{
-    position: absolute;
-    width: 450px;
-    height: 650px;
-    top: 50%;
-    left: 15%;
-    transform: translate(-15%,-50%) scale(1);
+ .map__options{
+     
+    position: relative;
+
+    height: 800px;
     background-color: var(--blue-medium);
     color: var(--sand);
     align-items: center;
     border-radius: 25px;
     font-family: "Lithos Pro Regular";
-}
+} 
 
 .map__options h1{
     padding: 10px;
@@ -153,65 +150,11 @@ body{
     font-weight: bold;
 }
 
+#row-content{
 
-/*pop up when u click something on the map*/
-.modal{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%) scale(0);
-    transition: 200ms ease-in-out;
-    border: 1px solid var(--blue-strong);
-    border-radius: 10px;
-    z-index: 10;
-    background-color: var(--sand);
-    width: 500px;
-    max-width: 80%;
+    background-color: var(--blue-strong);
 }
 
-.modal.active{
-    transform: translate(-50%,-50%) scale(1);
-}
-
-.modal-header{
-    padding: 10px 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid var(--blue-strong);
-}
-
-.modal-header .title{
-    font-size: 1.25rem;
-    font-weight: bold;
-}
-
-.modal-header .close-button{
-    cursor: pointer;
-    border: none;
-    outline: none;
-    background: none;
-    font-size: 1.25rem;
-    font-weight: bold;
-}
-
-.modal-body{
-    padding: 10px 15px;
-}
-
-#overlay{
-    position: fixed;
-    opacity: 0;
-    transition: 200ms ease-in-out;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0,0,0,0.3);
-    pointer-events: none;
-}
-
-#overlay.active{
-    pointer-events:all;
-    opacity: 1;
+#col-ref{
+   margin-top: 1200px;
 }
