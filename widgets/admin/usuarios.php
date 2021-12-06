@@ -79,7 +79,7 @@
                                             // poner inputs para modificar desde aqui
                                             
                                             if($datos["id_user"]!=""){
-                                                echo "<form action='../../DB/updateUser.php' method = 'post'></form>"; //form para cada usuario
+                                                echo "<form action='../../DB/updateUser.php' method = 'post'>"; //form para cada usuario
 
                                                 echo "<input type='hidden' value=". $datos["id_user"].   " name='txtIdUser'>";
                                                 echo "<td><input type='text' name='txtName' id='txtName' class='form-control' placeholder='nombre usuario' aria-label='Titulo' aria-describedby='basic-addon1'value= '".$datos["name"]. "'></td>";

@@ -28,7 +28,7 @@ if( $_POST["txtIdUser"]           != "" &&
     $_POST["txtName"]         != "" &&
     $_POST["txtEmail"]      != "" &&
     $_POST["txtContraseña"]   != "" &&
-    $_POST["txtRol"]           != ""  &&
+    $_POST["txtRol"]           != ""  
     // $_POST["txtContent"]        != "" 
 ){
 
