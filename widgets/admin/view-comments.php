@@ -37,21 +37,21 @@
                 <!-- Separacion entre ventana izquierda y derecha -->
                 <div class="col-10">
                     <!-- Contenedor para ver publicacion -->
-                    <div class="container-fluid" id="prueba">
+                    <div class="container-fluid" id="container-post">
                         <div class="row">
                            
                             <!-- Contenido de texto -->
-                            <div class="col-8" id="prueba-col">
+                            <div class="col-8" id="container-info-post">
 
                                 <h1 class="display-4 text-capitalize"><?php
                                 echo $info_post["title"];
                                 ?></h1>
 
-                                <p class="mt-2"><?php
+                                <p class="mt-3"><?php
                                 echo $info_post["content"];
                                 ?></p>
 
-                                <span class="mt-2"> <?php
+                                <span class="mt-3"> <?php
                                 echo $info_post["date"];
                                 ?></span>
                             </div>
@@ -59,9 +59,9 @@
                             <div class="col-1"></div>
                             
                             <!-- Contenido de imagen -->
-                            <div class="col-3" id="prueba-col">
+                            <div class="col-3" id="img-container">
                             <?php
-                             echo "<img  width=100% id='postPhoto' src='../general/show-photo-post.php?idPost=".$info_post["id_post"]."' alt='".$info_post['title']."'>";
+                             echo "<img  width= 100%!important height=90% id='postPhoto' src='../general/show-photo-post.php?idPost=".$info_post["id_post"]."' alt='".$info_post['title']."'>";
                             ?>
                             </div>
                             
@@ -84,6 +84,9 @@
                                 <!-- poner todos los comentarios -->
                                 <div class="container-fluid" id="container-comments">
                                     <ul class = "list-comments">
+                                        <li>
+                                            <div class="col mt-2"></div>
+                                        </li>
                                     <?php
                                         $c = connectDB();
                                         $qry = "select * from comments where id_post=".$info_post["id_post"];

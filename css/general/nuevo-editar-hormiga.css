@@ -7,48 +7,84 @@
     font-style: bold;
 }
 
-#prueba{
-    border: 5px solid red;
+/* editar post estilos */
+#container-post{
+    background-color: var(--blue-cream);
+    color: var(--blue-medium);
+    border-radius: 25px;
+}
+#container-info-post{
+    margin: 0;
+    align-items: center;
+}
+
+#img-container{
+    margin-top: 1%;
+    border-radius: 25px;
+    overflow: hidden;
 }
 
 #prueba-col{
-    border: 5px solid blue;
+    margin-top: 1%;
+    align-items: center;
+    background-color: var(--blue-cream);
+    color: var(--blue-medium);
+    border-radius: 25px;
+    /* border: 5px solid blue; */
 }
 
 #container-comments{
     max-height: 400px;
+    overflow-y: auto;
 }
 
-#list-comments{
+
+.list-comments{
     height: 90%;
     width: 100%;
     display: block;
-    overflow-y: auto;
+    
     line-height: 1.5;
+    list-style-type:none;
 }
 
-#list-comments p{
-    font-size: 32px;
-    color: var(--sand);
+.list-comments p{
+    font-size: 28px;
+    color: var(--blue-medium);
     text-decoration: none;
 }
 
-#list-comments p.is-active{
+.list-comments p:hover{
     color: var(--blue-strong);
     font-weight: bold;
 }
 
+
+/* Editar formulario registro */
+
+#container-form{
+    background-color: var(--blue-cream);
+    color: var(--blue-medium);
+    width: 75%;
+    border-radius: 50px;
+}
+
+#btn-form{
+    background-color: var(--blue-medium);
+    color: var(--sand);
+    transition: 0.4s all ease-in-out;
+}
+
+#btn-form:hover{
+    background-color: var(--blue-strong);
+    color: var(--blue-medium);
+}
 
 #arrow-back{
     text-decoration: none;
     color: var(--blue-medium);
 }
 
-/* #ant-photo-db{
-    max-width: 150px;
-    max-height: 75px!important;
-    border-radius: 25px;
-} */
 
 #arrow-back:hover{
     color: var(--blue-strong);

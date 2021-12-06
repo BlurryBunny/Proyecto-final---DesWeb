@@ -2,14 +2,20 @@
     session_start();
     include("../../DB/connectDB.php");
 
-    //verificar si existe un dato
-    if(!isset($_GET["idPost"])){
-        header("location:".$ruta."pages/web/mapa.php");
+
+    if(!isset($_SESSION["idU"])){
+        header("location:".$ruta."pages/general/logIn.php?err=4");//no se ha iniciado sesion todavia
     }
 
-    if($_GET["idPost"] == ""){
-        header("location:".$ruta."pages/web/mapa.php");
+    $rol_user = get_user_rol($_SESSION["idU"]);
+    if($rol_user != "Administrador"){
+        header("location:".$ruta."pages/general/logIn.php?err=4");//no se ha iniciado sesion todavia
     }
+
+    if(!isset($_GET["idPost"]) || $_GET["idPost"] == ""){
+        header("location:".$ruta."pages/admin/publicaciones.php?err=3");
+    }
+
     
     //responder con la imagen
     $c =connectDB();

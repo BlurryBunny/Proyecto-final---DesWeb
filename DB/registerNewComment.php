@@ -23,7 +23,7 @@
 
                 $date = date("Y/m/d");
                 $qry = "insert into comments(id_post,id_user,content,date) values(".$_POST['txtIdPost'].",".$_SESSION['idU'].",'".$_POST['txtComentario']."','$date')";
-                $rs = mysqli_query($c,$qry);
+                
                 
                 if(!mysqli_query($c,$qry)){
                     // echo "<h1>Error</h1>";

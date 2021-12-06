@@ -45,7 +45,7 @@
         include("../../widgets/web/header-pt1.php");
     ?>
 
-    <title>Hormigas</title>
+    <title>Publicaciones</title>
     <link rel="stylesheet" href="../../css/admin/navbar-title.css">
     <link rel="stylesheet" href="../../css/admin/post-admin.css">
     <link rel="stylesheet" href="../../css/admin/table-content-admin.css">

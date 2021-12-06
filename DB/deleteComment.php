@@ -20,6 +20,6 @@ if($_GET["idComment"]!="" &&  $_GET["idPost"]){
     $qry = "delete from comments where id_comment=" .$_GET["idComment"];
     mysqli_query($c,$qry);
     mysqli_close($c);
-    header("location:".$ruta."pages/admin/hormigas.php?delAnt=true");//no se ha iniciado sesion todavia
+    header("location:".$ruta."pages/admin/view-comments.php?errDelComment=2&idPost=".$_GET["idPost"]);//Se ha borrado el comentario
 }
 ?>

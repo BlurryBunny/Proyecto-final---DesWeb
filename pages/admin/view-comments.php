@@ -19,10 +19,7 @@
         //check error when the form is submit
         if(isset($_GET['errDelComment']) && $_GET['errDelComment']!=""){
             // if($_GET['errDelComment'] == "1") $msg = "No existen los campos a registrar";
-            // if($_GET['errNewState'] == "2") $msg = "Uno o varios campos estan vacios";
-            // if($_GET['errNewState'] == "3") $msg = "No se adjunto ningun archivo en imagen";
-            // if($_GET['errNewState'] == "4") $msg = "Lo que se adjunto no es una imagen";
-            // if($_GET['errNewState'] == "5") header("location:".$ruta."pages/admin/estados.php?newState=true");
+            // if($_GET['errDelComment'] == "2") $msg = "Uno o varios campos estan vacios";
         }
 
         
@@ -37,10 +34,11 @@
         include("../../widgets/web/header-pt1.php");
     ?>
 
-    <title>Nuevo estado</title>
+    <title>Comentarios</title>
     <link rel="stylesheet" type="text/css" href="../../css/general/bootstrap.min.css">
     <link rel="stylesheet" href="../../css/general/nuevo-editar-hormiga.css">    
-    
+    <link rel="stylesheet" href="../../css/admin/post-admin.css">    
+
     <?php
         include("../../widgets/web/header-pt2-without-bootstrap.php");
         include("../../widgets/admin/view-comments.php");
