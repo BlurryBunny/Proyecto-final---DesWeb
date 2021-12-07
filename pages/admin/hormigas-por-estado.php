@@ -20,7 +20,8 @@
 
         //check if an ant is delete or not
         if(isset($_GET['delRelStateAnt']) && $_GET['delRelStateAnt']!=""){
-
+            if($_GET['delRelStateAnt'] == "true") $msg = "La relacion se ha eliminado correctamente";
+            if($_GET['delRelStateAnt'] == "false") $msg = "No existen los valores en el registro";
         }
 
         
@@ -28,8 +29,10 @@
         if(isset($_GET['newRelStateAnt']) && $_GET['newRelStateAnt']!=""){
             if($_GET['newRelStateAnt'] == "true"){
                 $msg = "Una nueva relacion de hormiga en estado se ha registrado, gracias por tu aportacion";
-            }else{
+            }else if($_GET['newRelStateAnt'] == "false"){
                 $msg = "Hubo un problema con el registro de estado";
+            }else if ($_GET['newRelStateAnt'] == "alrExist"){
+                $msg = "La hormiga ya existe en el estado, no puede repetirse";
             }
         }
         //widgets include
@@ -56,10 +59,13 @@
     ?>
 
     <script src="../../js/admin/navbar-admin.js"></script>
+    <script src='../../js/general/general.js'> </script>
     <?php
+
+    if($msg!=""){
+        echo "<script type=\"text/javascript\">my_alert('".$msg."');</script>";
+    }
         include("../../widgets/web/end-file.php");
 
-        if($msg!=""){
-            echo "<script type=\"text/javascript\">my_alert(".$msg.");</script>";
-        }
+        
     ?>

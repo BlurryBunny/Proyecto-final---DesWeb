@@ -59,26 +59,49 @@
 
     extract($_POST);
 
-    //crear la consulta a la SQL a la DB
-    $qry = "insert into users (name, password, rol, email) value('$txtName','$txtPassword','$txtRol_insert','$txtEmail')";
-    $rs  =  petitionSQL($qry);
-
-    if($rol_user == "Administrador"){
-       if($rs){
-            //el usuario se ha registrado correctamente
-            header("location: ".$ruta."pages/admin/usuarios.php?NewUser=true");
-       }else{
-           //no se pudo insertar
-            header("location: ".$ruta."pages/admin/usuarios.php?NewUser=false");
-       }
-    }else{
-
-        if($rs){
-            //el usuario se ha registrado correctamente
-            header("location: ".$ruta."pages/general/signUp.php?err=4");
-        }else{
-            header("location: ".$ruta."pages/general/signUp.php?err=5");
+    $user_exist = false;
+                
+    //hacer la comparacion
+    $c= connectDB();
+    $qry = "select * from users";
+    $rs = mysqli_query($c,$qry);
+    
+    //no se puede repetir hormiga
+    if(mysqli_num_rows($rs)>0){
+        while($data = mysqli_fetch_array($rs)){
+            if($data["email"] == $txtEmail){
+                $user_exist = true;
+            }
         }
     }
+    mysqli_close($c);
+
+
+    if(!$user_exist){
+        //crear la consulta a la SQL a la DB
+        $qry = "insert into users (name, password, rol, email) value('$txtName','$txtPassword','$txtRol_insert','$txtEmail')";
+        $rs  =  petitionSQL($qry);
+
+        if($rol_user == "Administrador"){
+        if($rs){
+                //el usuario se ha registrado correctamente
+                header("location: ".$ruta."pages/admin/usuarios.php?NewUser=true");
+        }else{
+            //no se pudo insertar
+                header("location: ".$ruta."pages/admin/usuarios.php?NewUser=false");
+        }
+        }else{
+
+            if($rs){
+                //el usuario se ha registrado correctamente
+                header("location: ".$ruta."pages/general/signUp.php?err=4");
+            }else{
+                header("location: ".$ruta."pages/general/signUp.php?err=5");
+            }
+        }
+    }else{
+        header("location: ".$ruta."pages/admin/usuarios.php?NewUser=alrExist");
+    }
+    
 
 ?>

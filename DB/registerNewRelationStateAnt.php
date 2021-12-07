@@ -20,24 +20,23 @@
             $_POST['txtIdAnt']!=""          ){
                 $rel_exist = false;
                 
+                //hacer la comparacion
                 $c= connectDB();
                 $qry = "select * from ants_in_states";
                 $rs = mysqli_query($c,$qry);
                 
-                if($rs){
-                    while($data = mysqli_fetch_all($rs) && !$rel_exist){
-                        // if($data["id_ant"] === $_POST["txtIdAnt"] && $data["id_state"] === $_POST["txtIdState"]){
-                        //     $rel_exist = true;
-                        // }
-                        // echo $data."<br>";
-                        // echo  $_POST["txtIdAnt"];
-                        // echo $data["id_state"];
-                        // echo  $_POST["txtIdState"];
+                //no se puede repetir hormiga
+                if(mysqli_num_rows($rs)>0){
+                    while($data = mysqli_fetch_array($rs)){
+                        if($data["id_ant"] == $_POST["txtIdAnt"] && $data["id_state"] == $_POST["txtIdState"]){
+                            $rel_exist = true;
+                        }
                     }
-                
-                
+                }
+
+                //si hormiga no esta repetida
                 if(!$rel_exist){
-                
+                    
                     $qry = "insert into ants_in_states(id_state,id_ant) values(".$_POST["txtIdState"].",".$_POST["txtIdAnt"].")";
                     
                     if(!mysqli_query($c,$qry)){
@@ -45,11 +44,10 @@
                     }
                     
                     mysqli_close($c);
-                    // echo $txtName." <br>". $txtFamily ."<br> ".$txtSubfamily." <br>". $txtAlimentation."<br> ".$txtCare." <br>". $txtContent ."<br> ".$date." <br>". $imagen;
                     header("location:".$ruta."pages/admin/hormigas-por-estado.php?newRelStateAnt=true"); // todo correcto return to ant
-                }
-                //ya existe la relacion
-                header("location:".$ruta."pages/admin/hormigas-por-estado.php?newRelStateAnt=alrExist"); // todo correcto return to ant
+                }else{
+                    //ya existe la relacion
+                    header("location:".$ruta."pages/admin/hormigas-por-estado.php?newRelStateAnt=alrExist"); // todo correcto return to ant
                 }
         }else{
             header("location: ".$ruta."pages/admin/hormigas-por-estado.php?err=2");

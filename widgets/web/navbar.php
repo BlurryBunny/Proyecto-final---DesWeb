@@ -1,7 +1,8 @@
 
 
-<div class="row">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+
     <div class="container-fluid">
         <div class="col-3">
             <img class="img-logo" src="../../assets/imgs/logo-mexAnt.png" alt="imagen-logo" >
@@ -46,4 +47,3 @@
         </div>
     </div>
     </nav>
-</div>

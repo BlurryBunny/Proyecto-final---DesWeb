@@ -13,25 +13,24 @@
         }
     
         if(isset($_GET['err']) && $_GET['err']!=""){
-            // if($_GET['err'] == "1") $msg = "Se debe utilizar el formulario de registro";
-            // if($_GET['err'] == "2") $msg = "Debes de rellena todos los campos del formulario para poder registrarte";
-            // if($_GET['err'] == "3") $msg = "Las contraseñas no coinciden";
-            // if($_GET['err'] == "4") $msg =  header("location:".$ruta."pages/general/logIn.php?err=4");
-            // if($_GET['err'] == "5") $msg = "No se ha podido crear tu cuenta, intenta nuevamente";
+            if($_GET['err'] == "1") $msg = "Se debe utilizar el formulario de registro";
+            if($_GET['err'] == "2") $msg = "Debes de rellena todos los campos del formulario para poder registrarte";
+            if($_GET['err'] == "3") $msg = "Lo que se subio no es una imagen";
+            if($_GET['err'] == "4") $msg = "No existe el formulario para fotografia ";
+
         }
 
         //check if an ant is delete or not
         if(isset($_GET['delAnt']) && $_GET['delAnt']!=""){
-            // if($_GET['err'] == "1") $msg = "Se debe utilizar el formulario de registro";
-            // if($_GET['err'] == "2") $msg = "Debes de rellena todos los campos del formulario para poder registrarte";
-            // if($_GET['err'] == "3") $msg = "Las contraseñas no coinciden";
-            // if($_GET['err'] == "4") $msg =  header("location:".$ruta."pages/general/logIn.php?err=4");
-            // if($_GET['err'] == "5") $msg = "No se ha podido crear tu cuenta, intenta nuevamente";
+            if($_GET['delAnt'] == "true") $msg = "Se ha eliminado la hormiga correctamente";
+            if($_GET['delAnt'] == "false") $msg = "Hubo un error al eliminar hormiga";
         }
 
         if(isset($_GET['updAnt']) && $_GET['updAnt']!=""){
             if($_GET['updAnt'] == "true") $msg = "Que bueno, los cambios se guardaron correctamente";
+            if($_GET['updAnt'] == "false") $msg = "No se pudieron hacer los cambios";
         }
+
 
         if(isset($_GET['newAnt']) && $_GET['newAnt']!=""){
             if($_GET['newAnt'] == "true"){
@@ -60,12 +59,16 @@
     </div>
     <?php
         include("../../widgets/admin/hormigas.php");
-        if($msg!=""){
-            echo "<script type=\"text/javascript\">my_alert(".$msg.");</script>";
-        }
     ?>
 
     <script src="../../js/admin/navbar-admin.js"></script>
+    <script src='../../js/general/general.js'> </script>
     <?php
+
+    if($msg!=""){
+        echo "<script type=\"text/javascript\">my_alert('".$msg."');</script>";
+    }
         include("../../widgets/web/end-file.php");
+
+        
     ?>

@@ -29,15 +29,14 @@ isset($_POST["txtIdState"])
         $c = connectDB();
         $qry = "Update states set name = '".$_POST["txtName"]."' ,short_name='".$_POST["txtNameShort"]."' where id_state=" .$_POST["txtIdState"];
         if(!mysqli_query($c,$qry)){
-            header("location:".$ruta."pages/admin/new-edit-estado.php?updState=false&idState=".$_POST); // se registraron los cambios
+            header("location:".$ruta."pages/admin/estados.php?updState=false"); // se registraron los cambios
         }
-
         mysqli_close($c);
-        header("location:".$ruta."pages/admin/new-edit-estado.php?updState=true"); // se registraron los cambios
+        header("location:".$ruta."pages/admin/estados.php?updState=true"); // se registraron los cambios
     }else{
-        header("location:".$ruta."pages/admin/new-edit-estado.php?errNewState=2"); // falla en consulta
+        header("location:".$ruta."pages/admin/estados.php?err=2"); // falla en consulta
     }
 }else{
-    header("location:".$ruta."pages/admin/new-edit-estado.php?errNewState=1"); // falla en consulta
+    header("location:".$ruta."pages/admin/estados.php?err=1"); // falla en consulta
 }    
 ?>

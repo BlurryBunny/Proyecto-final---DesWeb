@@ -59,7 +59,7 @@
                         }
                         mysqli_close($c);
                         // echo $txtName." <br>". $txtFamily ."<br> ".$txtSubfamily." <br>". $txtAlimentation."<br> ".$txtCare." <br>". $txtContent ."<br> ".$date." <br>". $imagen;
-                        header("location:".$ruta."pages/admin/publicaciones.php?newPost=5"); // todo correcto return to ant
+                        header("location:".$ruta."pages/admin/publicaciones.php?newPost=true"); // todo correcto return to ant
                     }else{
                         header("location:".$ruta."pages/admin/new-edit-publicacion.php?err=4"); // lo que se adjunto no es una imagen 
                     }

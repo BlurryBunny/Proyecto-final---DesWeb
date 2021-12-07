@@ -18,8 +18,9 @@ if(!isset($_GET["idAnt"])){
 if($_GET["idAnt"]!=""){
     $c = connectDB();
     $qry = "delete from ants where id_ant=" .$_GET["idAnt"];
-    mysqli_query($c,$qry);
-    mysqli_close($c);
+    if(!mysqli_query($c,$qry)){
+        header("location:".$ruta."pages/admin/hormigas.php?delAnt=false");//no se ha iniciado sesion todavia
+    }
     header("location:".$ruta."pages/admin/hormigas.php?delAnt=true");//no se ha iniciado sesion todavia
 }
 ?>

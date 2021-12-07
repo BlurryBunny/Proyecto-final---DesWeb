@@ -193,7 +193,7 @@
                         <?php
                             //if we have values we need to return to the page ants when we click to cancel
                            if(isset($_GET["idPost"]) && $_GET["idPost"]!=""){
-                                echo   "<a href='../../admin/hormigas.php' id='btn-Cancelar' class='btn btn-info' role='button'>Cancelar</a>";
+                                echo   "<a href='publicaciones.php' id='btn-Cancelar' class='btn btn-info' role='button'>Cancelar</a>";
                            }else{
                                 echo "<input type='reset' id='btn-Cancelar' class='btn btn-primary' value='Cancelar'> <br>";
                            }

@@ -38,7 +38,7 @@
         include("../../widgets/web/header-pt1.php");
     ?>
 
-    <title>Nueva hormiga</title>
+    <title>Nueva publicacion</title>
     <link rel="stylesheet" type="text/css" href="../../css/general/bootstrap.min.css">
     <link rel="stylesheet" href="../../css/general/nuevo-editar-hormiga.css">    
     

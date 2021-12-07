@@ -15,21 +15,17 @@
 
     
 //data exits?
-if( isset($_POST["txtIdUser"])            &&
-isset($_POST["txtName"])          &&
-isset($_POST["txtEmail"])       &&
-isset($_POST["txtContraseña"])    &&
-isset($_POST["txtRol"])            
-// isset($_POST["txtContent"])
+if( isset($_POST['typePost'])   &&
+isset($_POST['txtTitle'])   &&
+isset($_POST['txtIdPost']) &&
+isset($_POST['txtContent'])
 ){
 
 //data is not empty?
-if( $_POST["txtIdUser"]           != "" &&
-    $_POST["txtName"]         != "" &&
-    $_POST["txtEmail"]      != "" &&
-    $_POST["txtContraseña"]   != "" &&
-    $_POST["txtRol"]           != ""  
-    // $_POST["txtContent"]        != "" 
+if( $_POST['typePost']!=""      &&
+$_POST['txtTitle']!=""          &&  
+$_POST['txtIdPost']!=""         &&       
+$_POST['txtContent']!=""
 ){
 
     //photo is not empty?
@@ -38,18 +34,20 @@ if( $_POST["txtIdUser"]           != "" &&
 
     extract($_POST); //extract variables for easy form to qry
 
-    if(!empty($_FILES["photo"]["tmp_name"])){
+    $date = date("Y/m/d"); // we need to save the date just in case
+
+    if(!empty($_FILES["postPhoto"]["tmp_name"])){
         
-        $tipo = $_FILES["photo"]["type"];
+        $tipo = $_FILES["postPhoto"]["type"];
 
         if (    strpos($tipo, "gif") || strpos($tipo, "jpeg") ||
                 strpos($tipo, "jpg") || strpos($tipo, "png"))
         {   
             //recuperar info del archivo
-            $nombre = $_FILES["photo"]["name"];
+            $nombre = $_FILES["postPhoto"]["name"];
         
-            $nombre_temporal = $_FILES["photo"]["tmp_name"];
-            $tamanio = $_FILES["photo"]["size"];
+            $nombre_temporal = $_FILES["postPhoto"]["tmp_name"];
+            $tamanio = $_FILES["postPhoto"]["size"];
             
             $titulo = $txtName;
 
@@ -66,14 +64,14 @@ if( $_POST["txtIdUser"]           != "" &&
             // Nota, te quedaste insertando la imagen que ya no tiene llave, una vez que la llave esta guardada 
 
             //!important qry con imagen agregada
-            $qry =  "Update users set name='".$txtName. "' ,email='" .$txtEmail. "' ,password='".$txtContraseña."' ,rol='".$txtRol."' ,photo='".$imagen."' ,type_photo='".$tipo."' where id_user=".$txtIdUser;
+            $qry =  "Update posts set id_user=". $_SESSION["idU"].",title='".$txtTitle. "' ,content='" .$txtContent. "' ,date='".$date."' ,type_post='".$typePost."' ,photo='".$imagen."' ,type_photo='".$tipo."' where id_post=".$txtIdPost;        
         }else{
-            header("location:".$ruta."pages/admin/new-edit-hormiga.php?err=6"); // lo que se adjunto no es una imagen 
+            header("location:".$ruta."pages/admin/publicaciones.php?err=3"); // lo que se adjunto no es una imagen 
         }
 
     }else{
         //!important qry sin imagen 
-        $qry =  "Update users set name='".$txtName. "' ,email='" .$txtEmail. "' ,password='".$txtContraseña."' ,rol='".$txtRol."' where id_user=".$txtIdUser;
+        $qry =  "Update posts set id_user=". $_SESSION["idU"].",title='".$txtTitle. "' ,content='" .$txtContent. "' ,date='".$date."' ,type_post='".$typePost."' where id_post=".$txtIdPost;        
     }
 
     //We need to add everything to new ant
@@ -82,17 +80,17 @@ if( $_POST["txtIdUser"]           != "" &&
     
     //agregar la imagen
     if(!mysqli_query($c,$qry)){
-        // echo "<h1>Error</h1>";
-        header("location:".$ruta."pages/admin/usuarios.php?updUser=false"); // falla en consulta
+        echo "<h1>Error</h1>";
+         header("location:".$ruta."pages/admin/publicaciones.php?updPost=false"); // falla en consulta
     }
     mysqli_close($c);
-    header("location:".$ruta."pages/admin/usuarios.php?updUser=true"); // todo correcto return to ant
+    header("location:".$ruta."pages/admin/publicaciones.php?updPost=true"); // todo correcto return to ant
 
     
 }else{
-    header("location:".$ruta."pages/admin/usuarios.php?err=2"); // alguno o todos los campos estan vacios
+    header("location:".$ruta."pages/admin/publicaciones.php?err=2"); // alguno o todos los campos estan vacios
 }
 }else{
-header("location:".$ruta."pages/admin/usuarios.php?err=1"); // no existen datos en post
+header("location:".$ruta."pages/admin/publicaciones.php?err=1"); // no existen datos en post
 }
 ?>

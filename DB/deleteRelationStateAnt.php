@@ -15,10 +15,12 @@ if(!isset($_GET["idState"]) && !isset($_GET["idAnt"])){
     header("location:".$ruta."pages/admin/hormigas-por-estado.php?delRelStateAnt=false");//no se ha iniciado sesion todavia
 }
 
-if($_GET["idAnt"] && $_GET["idState"]){
+if($_GET["idAnt"]!= "" && $_GET["idState"]!=""){
     $c = connectDB();
     $qry = "delete from ants_in_states where id_ant=" .$_GET["idAnt"] ." and id_state=".$_GET["idState"];
-    mysqli_query($c,$qry);
+    if(!mysqli_query($c,$qry)){
+        header("location:".$ruta."pages/admin/hormigas-por-estado.php?delRelStateAnt=false");//no se ha iniciado sesion todavia
+    }
     mysqli_close($c);
     header("location:".$ruta."pages/admin/hormigas-por-estado.php?delRelStateAnt=true");//no se ha iniciado sesion todavia
 }

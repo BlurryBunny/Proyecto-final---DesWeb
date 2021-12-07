@@ -69,18 +69,18 @@ if( isset($_POST["txtName"])            &&
                 }
                 mysqli_close($c);
                 // echo $txtName." <br>". $txtFamily ."<br> ".$txtSubfamily." <br>". $txtAlimentation."<br> ".$txtCare." <br>". $txtContent ."<br> ".$date." <br>". $imagen;
-                header("location:".$ruta."pages/admin/new-edit-hormiga.php?errNewAnt=5"); // todo correcto return to ant
+                header("location:".$ruta."pages/admin/hormigas.php?newAnt=true"); // todo correcto return to ant
             }else{
-                header("location:".$ruta."pages/admin/new-edit-hormiga.php?errNewAnt=4"); // lo que se adjunto no es una imagen 
+                header("location:".$ruta."pages/admin/hormigas.php?err=3"); // lo que se adjunto no es una imagen 
             }
 
         }else{
-            header("location:".$ruta."pages/admin/new-edit-hormiga.php?errNewAnt=3"); // no se adjunto ningun archivo en imagen
+            header("location:".$ruta."pages/admin/hormigas.php?err=4"); // no se adjunto ningun archivo en imagen
         }
     }else{
-        header("location:".$ruta."pages/admin/new-edit-hormiga.php?errNewAnt=2"); // alguno o todos los campos estan vacios
+        header("location:".$ruta."pages/admin/hormigas.php?err=2"); // alguno o todos los campos estan vacios
     }
 }else{
-    header("location:".$ruta."pages/admin/new-edit-hormiga.php?errNewAnt=1"); // no existen datos en post
+    header("location:".$ruta."pages/admin/hormigas.php?err=1"); // no existen datos en post
 }
 ?>

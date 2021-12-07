@@ -1,7 +1,6 @@
 <?php
 
     include("connectDB.php");
-
     session_start();
     if(!isset($_SESSION["idU"])){
         header("location:".$ruta."pages/general/logIn.php?err=4");//no se ha iniciado sesion todavia
@@ -18,23 +17,39 @@
 
         if( $_POST['txtName']!=""        || 
             $_POST['txtNameShort']!=""   ){
-                $qry = "insert into states(name,short_name) values('".$_POST["txtName"]."','".$_POST["txtNameShort"]."')";
+
+                $state_exist = false;
+                
+                //hacer la comparacion
                 $c= connectDB();
-                if(!mysqli_query($c,$qry)){
-                    // echo "<h1>Error</h1>";
-                    header("location:".$ruta."pages/admin/estados.php?newState=false"); // todo correcto return to ant
+                $qry = "select * from states";
+                $rs = mysqli_query($c,$qry);
+                
+                //no se puede repetir hormiga
+                if(mysqli_num_rows($rs)>0){
+                    while($data = mysqli_fetch_array($rs)){
+                        if($data["name"] == $_POST["txtName"] && $data["short_name"] == $_POST["txtNameShort"]){
+                            $state_exist = true;
+                        }
+                    }
+                }
+
+                if(!$state_exist){
+                    $qry = "insert into states(name,short_name) values('".$_POST["txtName"]."','".$_POST["txtNameShort"]."')";
+                    $c= connectDB();
+                    if(!mysqli_query($c,$qry)){
+                        header("location:".$ruta."pages/admin/estados.php?newState=false"); // todo correcto return to ant
+                    }
+                    mysqli_close($c);
+                    header("location:".$ruta."pages/admin/estados.php?newState=true"); // todo correcto return to ant
+                }else{
+                    header("location:".$ruta."pages/admin/estados.php?newState=alrExist"); // todo correcto return to ant
                 }
                 
-                mysqli_close($c);
-                // echo $txtName." <br>". $txtFamily ."<br> ".$txtSubfamily." <br>". $txtAlimentation."<br> ".$txtCare." <br>". $txtContent ."<br> ".$date." <br>". $imagen;
-                header("location:".$ruta."pages/admin/new-edit-estado.php?newState=true"); // todo correcto return to ant
         }else{
-            header("location: ".$ruta."pages/admin/new-edit-estados.php?errNewState=2");
+            header("location: ".$ruta."pages/admin/estados.php?err=2");
         }
     }else{
-        header("location: ".$ruta."pages/admin/new-edit-estados.php?errNewState=1");
+        header("location: ".$ruta."pages/admin/estados.php?err=1");
     }
-
-    
-
 ?>

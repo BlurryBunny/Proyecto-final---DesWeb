@@ -15,11 +15,14 @@ if(!isset($_GET["idState"])){
     header("location:".$ruta."pages/admin/estados.php?delState=false");//no se ha iniciado sesion todavia
 }
 
-if($_GET["idState"]){
+if($_GET["idState"]!=""){
     $c = connectDB();
     $qry = "delete from states where id_state=" .$_GET["idState"];
-    mysqli_query($c,$qry);
-    mysqli_close($c);
-    header("location:".$ruta."pages/admin/estados.php?delState=true");//no se ha iniciado sesion todavia
+    
+    if(mysqli_query($c,$qry)){
+        header("location:".$ruta."pages/admin/estados.php?delState=true");//no se ha iniciado sesion todavia
+    }
+
+    header("location:".$ruta."pages/admin/estados.php?delState=false");//no se ha iniciado sesion todavia
 }
 ?>

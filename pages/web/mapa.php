@@ -21,19 +21,18 @@
     <link rel="stylesheet" href="../../css/general/modal.css">
     <link rel="stylesheet" href="../../css/general/footer.css">
     
-    
 <?php
     include("../../widgets/web/header-pt2.php");
 ?>
-
-<div class="container-fluid">
-<?php
-    include("../../widgets/web/navbar.php");
-    include("../../widgets/web/map.php");
-    include("../../widgets/web/modal.php");
-    include("../../widgets/web/footer.php");
-?>
+    <div class="container-fluid">
+    <?php
+        include("../../widgets/web/navbar.php");
+        include("../../widgets/web/map.php");
+        // include("../../widgets/web/modal.php");
+        include("../../widgets/web/footer.php");
+    ?>
     </div>
+
 <script src="../../js/general/polyfill.js"></script>
 <script type="text/javascript" src="../../js/general/map.js"></script>
 

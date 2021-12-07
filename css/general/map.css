@@ -53,21 +53,16 @@ body{
 }
 
 .menu-mexAnt ul li a.menu-selected, a:hover{
-    background: var(--blue-medium);
-    transition: 0.7s;
+    color: var(--blue-strong);
+    transition: 0.4s;
 }
 
 .content{
-    /* position: absolute;
-    
-    width: 100%;
-    height: 100%; */
     background-color: var(--blue-strong);
-    
     z-index: 0;
 }
 
-/* map style
+
 .map__image{
     position: absolute;
     height: 650px;
@@ -81,7 +76,7 @@ body{
     display: flex;
     border-radius: 25px;
 
-} */
+}
 
 .map__image svg{
     position: relative;
@@ -93,7 +88,7 @@ body{
     fill: var(--blue-cream);
     stroke: #fff;
     stroke-width: 1px;
-    transition: fill 1s all;
+    transition: all 0.4s ease;
 }
 
 .map__image .is-active path{
@@ -101,10 +96,10 @@ body{
 }
 
 .map__image path:hover{
-    fill: var(--sand);
+    fill: var(--blue-strong);
     stroke: #fff;
     stroke-width: 1px;
-    transition: fill 1s all;
+    transition: all 0.4s ease;
 }
 
 
@@ -112,7 +107,7 @@ body{
  .map__options{
      
     position: relative;
-
+    margin-top: 25%;
     height: 800px;
     background-color: var(--blue-medium);
     color: var(--sand);
@@ -148,13 +143,26 @@ body{
 .map__list a.is-active{
     color: var(--blue-strong);
     font-weight: bold;
+    text-decoration: none;
+}
+
+.map__list a:hover{
+    color: var(--blue-strong);
+    font-weight: bold;
+    text-decoration: none;
 }
 
 #row-content{
-
     background-color: var(--blue-strong);
+    color: var(--blue-strong);
+}
+
+#row-principal{
+    height: 1200px;
+    background-color: var(--blue-strong);
+
 }
 
 #col-ref{
-   margin-top: 1200px;
+   height: 100%;
 }
