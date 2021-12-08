@@ -1,11 +1,11 @@
-    <div class="row " id="row-content">
+    <!-- <div class="row " id="row-content">
         <h1>ey</h1>
     </div>
     <div class="row " id="row-content">
         <h1>ey</h1>
-    </div>
+    </div> -->
 
-    <div class="row " id="row-principal">
+    <div class="row  pt-5" id="row-principal">
     
         <div class="col-1" ></div>
 
@@ -16,7 +16,7 @@
                     <div class="map__list">
                         <ul>
                             <li> <a href = "?state=agu" id= "list-AGU">Aguascalientes 		</a> </li>
-                            <li> <a href = "?state=bcn" id= "list-BCN">Baja California Norte		</a> </li>
+                            <li> <a href = "?state=bcn" id= "list-BCN">Baja California		</a> </li>
                             <li> <a href = "?state=bcs" id= "list-BCS">Baja California Sur 	</a> </li>
                             <li> <a href = "?state=cam" id= "list-CAM">Campeche 			    </a> </li>	
                             <li> <a href = "?state=chp" id= "list-CHP">Chiapas 				</a> </li>

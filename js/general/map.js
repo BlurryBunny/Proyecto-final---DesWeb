@@ -27,6 +27,7 @@ paths.forEach(
         path.addEventListener('mouseenter', function(e){
             let id = this.id.replace('MX-',''); //obtenemos solo el nombre del estado
             activeArea(id);
+           
         })
     }
 );
@@ -54,6 +55,7 @@ paths.forEach(
         path.addEventListener('click', function(e){
             const modal = document.querySelector('.modal');
             openModal(modal);
+            console.log('hola presione');
         })
     }
 );

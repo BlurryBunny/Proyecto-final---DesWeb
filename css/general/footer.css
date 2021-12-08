@@ -22,29 +22,7 @@
     color: var(--sand);
 }
 
-/* .container-footer ul {
-    margin: 0px;
-    padding: 0px;
-}
 
-.container-footer ul li{
-    list-style: none;
-    float: left;  
-    text-transform:capitalize;
-    color: var(--blue-strong);
-    text-align: center;
-    padding-left: 25px;
-    transition: all 0.4s;
-    font-size: 18px;
-    font-style: bold;
-    text-decoration: none;
-}
-
-.container-footer ul li span{
-    font-size: 28px;
-    font-weight: bold;
-
-} */
 
 .span-info{
     padding-left: 25px;
@@ -62,6 +40,6 @@
 
 
 footer{
-    height: 8%;
+    height: 100px;
     background-color: var(--blue-cream);
 }

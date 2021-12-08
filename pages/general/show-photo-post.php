@@ -3,14 +3,14 @@
     include("../../DB/connectDB.php");
 
 
-    if(!isset($_SESSION["idU"])){
-        header("location:".$ruta."pages/general/logIn.php?err=4");//no se ha iniciado sesion todavia
-    }
+    // if(!isset($_SESSION["idU"])){
+    //     header("location:".$ruta."pages/general/logIn.php?err=4");//no se ha iniciado sesion todavia
+    // }
 
-    $rol_user = get_user_rol($_SESSION["idU"]);
-    if($rol_user != "Administrador"){
-        header("location:".$ruta."pages/general/logIn.php?err=4");//no se ha iniciado sesion todavia
-    }
+    // $rol_user = get_user_rol($_SESSION["idU"]);
+    // if($rol_user != "Administrador"){
+    //     header("location:".$ruta."pages/general/logIn.php?err=4");//no se ha iniciado sesion todavia
+    // }
 
     if(!isset($_GET["idPost"]) || $_GET["idPost"] == ""){
         header("location:".$ruta."pages/admin/publicaciones.php?err=3");

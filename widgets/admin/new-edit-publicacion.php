@@ -14,8 +14,11 @@
             <?php
                 // significa que se va a modificar un post
                 //validacion y verificacion
+                
                 if(isset($_GET["idPost"]) && $_GET["idPost"]!="" && isset($_GET["typePost"]) && $_GET["typePost"]!=""){
-
+                    if($rol_user != "Administrador"){
+                        header("location:".$ruta."pages/web/mapa.php");//no se ha iniciado sesion todavia
+                    }
                     //establecer la conexión a la DB
                     $conn = connectDB();
 

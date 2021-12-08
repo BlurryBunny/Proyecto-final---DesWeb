@@ -5,7 +5,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%) scale(0);
+    transform: translate(-50%,-50%);
     transition: 200ms ease-in-out;
     border: 1px solid black;
     border-radius: 10px;
@@ -61,3 +61,19 @@
     pointer-events:all;
     opacity: 1;
 }
+
+.myModal{
+    height: 75%;
+    width: 75%;
+    align-items: center;
+    background-color: wheat;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0);
+}
+
+/* .myModal{
+
+} */
+

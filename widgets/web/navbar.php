@@ -26,7 +26,7 @@
                     <a class="nav-link" href="../../pages/web/foro.php">Foro</a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link" href="../../pages/web/basicCares.php">Cuidados basicos</a>
+                    <a class="nav-link" href="../../pages/web/cuidadosBasicos.php">Cuidados basicos</a>
                     </li>
                     <li class="nav-item">
                     <a class="nav-link" href="../../pages/web/hormigas.php">Clasificacion</a>

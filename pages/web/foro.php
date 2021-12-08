@@ -17,27 +17,23 @@
 ?>
     <title>Mapa</title>
     <!-- include the ccs that we need to use between header -->
+    <!-- <link rel="stylesheet" href="../../css/general/map.css"> -->
     <link rel="stylesheet" href="../../css/general/navbar.css">
-    <link rel="stylesheet" href="../../css/general/map.css">
-    <link rel="stylesheet" href="../../css/general/modal.css">
+    <link rel="stylesheet" href="../../css/web/cuidadosBasicos.css">
     <link rel="stylesheet" href="../../css/general/footer.css">
     
 <?php
     include("../../widgets/web/header-pt2.php");
 ?>
-    <div class="container-fluid" id="container-page" >
+
     <?php
         include("../../widgets/web/navbar.php");
-        include("../../widgets/web/map.php");
+        include("../../widgets/web/foro.php");
+        // include("../../widgets/web/modal.php");
         include("../../widgets/web/footer.php");
     ?>
 
-    
 
-    </div>
-    <div class="myModal">
-        <h1>Ey</h1>
-    </div>
 <script src="../../js/general/polyfill.js"></script>
 <script type="text/javascript" src="../../js/general/map.js"></script>
 

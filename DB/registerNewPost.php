@@ -8,9 +8,9 @@
     }
 
     $rol_user = get_user_rol($_SESSION["idU"]);
-    if($rol_user != "Administrador"){
-        header("location:".$ruta."pages/general/logIn.php?err=4");//no se ha iniciado sesion todavia
-    }
+    // if($rol_user != "Administrador"){
+    //     header("location:".$ruta."pages/general/logIn.php?err=4");//no se ha iniciado sesion todavia
+    // }
 
     //los datos hayan sido pasados
     if( isset($_POST['typePost'])   &&
@@ -55,23 +55,71 @@
                         $qry = "insert into posts(id_user,title,content,date,type_post,photo,type_photo) values(" .$_SESSION["idU"]. ",'$txtTitle','$txtContent','$date','$typePost','$imagen','$tipo')";
                         if(!mysqli_query($c,$qry)){
                             // echo "<h1>Error</h1>";
-                            header("location:".$ruta."pages/admin/publicaciones.php?newPost=false"); // todo correcto return to ant
+                            if($rol_user == "Administrador"){
+                                header("location:".$ruta."pages/admin/publicaciones.php?newPost=false");
+                            }else{
+                                if($typePost == "Foro"){
+                                    header("location:".$ruta."pages/web/foro.php?newPost=false");
+                                }else{
+                                    header("location:".$ruta."pages/web/cuidadosBasicos.php?newPost=false");
+                                }
+                            } 
                         }
                         mysqli_close($c);
-                        // echo $txtName." <br>". $txtFamily ."<br> ".$txtSubfamily." <br>". $txtAlimentation."<br> ".$txtCare." <br>". $txtContent ."<br> ".$date." <br>". $imagen;
-                        header("location:".$ruta."pages/admin/publicaciones.php?newPost=true"); // todo correcto return to ant
+
+                        if($rol_user == "Administrador"){
+                            header("location:".$ruta."pages/admin/publicaciones.php?newPost=true");
+                        }else{
+                            if($typePost == "Foro"){
+                                header("location:".$ruta."pages/web/foro.php?newPost=true");
+                            }else{
+                                header("location:".$ruta."pages/web/cuidadosBasicos.php?newPost=true");
+                            }
+                        }
                     }else{
-                        header("location:".$ruta."pages/admin/new-edit-publicacion.php?err=4"); // lo que se adjunto no es una imagen 
+                        if($rol_user == "Administrador"){
+                            header("location:".$ruta."pages/admin/publicaciones.php?err=4");
+                        }else{
+                            if($typePost == "Foro"){
+                                header("location:".$ruta."pages/web/foro.php?err=4");
+                            }else{
+                                header("location:".$ruta."pages/web/cuidadosBasicos.php?err=4");
+                            }
+                        }
                     }
         
                 }else{
-                    header("location:".$ruta."pages/admin/new-edit-publicacion.php?err=3"); // no se adjunto ningun archivo en imagen
+                    if($rol_user == "Administrador"){
+                        header("location:".$ruta."pages/admin/publicaciones.php?err=3");
+                    }else{
+                        if($typePost == "Foro"){
+                            header("location:".$ruta."pages/web/foro.php?err=3");
+                        }else{
+                            header("location:".$ruta."pages/web/cuidadosBasicos.php?err=3");
+                        }
+                    }
                 }
         }else{
-            header("location: ".$ruta."pages/admin/new-edit-publicacion.php?err=2");
+            if($rol_user == "Administrador"){
+                header("location:".$ruta."pages/admin/publicaciones.php?err=2");
+            }else{
+                if($typePost == "Foro"){
+                    header("location:".$ruta."pages/web/foro.php?err=2");
+                }else{
+                    header("location:".$ruta."pages/web/cuidadosBasicos.php?err=2");
+                }
+            }
         }
     }else{
-        header("location: ".$ruta."pages/admin/new-edit-publicacion.php?err=1");
+        if($rol_user == "Administrador"){
+            header("location:".$ruta."pages/admin/publicaciones.php?err=1");
+        }else{
+            if($typePost == "Foro"){
+                header("location:".$ruta."pages/web/foro.php?err=1");
+            }else{
+                header("location:".$ruta."pages/web/cuidadosBasicos.php?err=1");
+            }
+        }
     }
 
     

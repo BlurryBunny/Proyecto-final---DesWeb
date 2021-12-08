@@ -18,30 +18,22 @@
             // if($_GET['err'] == "5") header("location:".$ruta."pages/admin/hormigas.php?newAnt=true");
         }
 
-        
-        if(isset($_GET['updPost']) && $_GET['updPost']!=""){
-            if($_GET['updPost'] == "true") $msg = header("location:".$ruta."pages/admin/publicaciones.php?updPost=true");
-            if($_GET['updPost'] == "false") $msg = "Que mal, no pudismos hacer actualizar la informacion";
-        
-        }
-        
-        if(isset($_GET['newPost']) && $_GET['newPost']!=""){
-            if($_GET['newPost'] == "true") $msg = header("location:".$ruta."pages/admin/publicaciones.php?newPost=true");
-            if($_GET['newPost'] == "false") $msg = "Hubo un error al intentar subir el post, intenta de nuevo";
-        
-        }
-
         //widgets include
         include("../../widgets/web/header-pt1.php");
     ?>
 
-    <title>Nueva publicacion</title>
+    <title>Modificar perfil</title>
     <link rel="stylesheet" type="text/css" href="../../css/general/bootstrap.min.css">
     <link rel="stylesheet" href="../../css/general/nuevo-editar-hormiga.css">    
     
+   
     <?php
         include("../../widgets/web/header-pt2-without-bootstrap.php");
-        include("../../widgets/admin/new-edit-publicacion.php");
+        include("../../widgets/web/modificarUsuario.php");
+    ?>
+
+    <script src='../../js/general/general.js'> </script>
+    <?php
         if($msg!=""){
             echo "<script type=\"text/javascript\">my_alert(".$msg.");</script>";
         }
