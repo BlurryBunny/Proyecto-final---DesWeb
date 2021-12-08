@@ -78,8 +78,8 @@
                                             echo "<td><img src='../general/show-photo-ants.php?idAnt=".$datos["id_ant"]."' alt='img-hormiga' class='img-table'></td>";
                                             echo "<td><span class='title-table'>".$datos["family"]."</span></td>";
                                             echo "<td><span class='title-table'>
-                                                <a href= 'new-edit-hormiga.php?idAnt=".$datos["id_ant"]."' class='btn-action'><i class='bx bx-edit' ></i></button>
-                                                <a href='../../DB/deleteAnt.php?idAnt=".$datos["id_ant"]."' class='btn-action'><i class='bx bx-trash' ></i></button>
+                                                <a href= 'new-edit-hormiga.php?idAnt=".$datos["id_ant"]."' class='btn-action'><i class='bx bx-edit' ></i></a>
+                                                <a href='../../DB/deleteAnt.php?idAnt=".$datos["id_ant"]."' class='btn-action'><i class='bx bx-trash' ></i></a>
                                                 </span></td>";
                                             echo "</tr>";
                                         }

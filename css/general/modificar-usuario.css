@@ -1,12 +1,68 @@
 @import url(root.css);
-@import url(form.css);
+/* @import url(form.css); */
 
-#img-user{
+/* #img-user{
     position: relative;
     max-width: 100%;
-    max-height: 150px!important;
+    max-height: 250px!important;
     border-radius: 50%;
     background-color: var(--blue-cream);
+} */
+
+
+#container-content-user{
+    background-color: var(--blue-medium);
+    color: var(--blue-strong);
+    border-radius: 50px;
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 2.5%;
+    /* font-size: 50px; */
+}
+
+#container-actions{
+    background-color: var(--blue-cream);
+    color: var(--sand);
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 2.5%;
+    border-radius: 50px;
+}
+
+#btn-action i{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: var(--blue-cream);
+    color: var(--blue-strong);
+    font-size: 45px;
+}
+
+
+#container-img-user i{
+    position: relative;
+    font-size: 250px;
+    padding-left: 25%;
+}
+#row-fil{
+    color: var(--blue-medium);
+}
+
+
+#input-txt-user{
+    height: 75px;
+    font-size: 25px;
+    color: var(--blue-strong);
+}
+
+#input-txt-user button{
+    background-color: var(--blue-medium);
+}
+
+#title-txt{
+    font-weight: bold;
+    font-size: 35px;
+    color: var(--blue-strong);
 }
 
 .row-user-img{
@@ -17,4 +73,18 @@
     background-color: var(--blue-cream);
     color: var(--blue-medium);
     font-size: 15px;
+}
+
+#typePost{
+    font-weight: bold;
+    height: 50px;
+    color: var(--blue-strong);
+    font-size: 25px;
+}
+
+#item-list-actions{
+    background-color: var(--blue-cream);
+    border: 2px solid var(--blue-medium);
+    border-style: dotted;
+    border-radius: 50px;
 }

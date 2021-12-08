@@ -2,7 +2,7 @@
             <div class="row" id="header-page">
                 <div class="col-1"></div>
                 <div class="col-1">
-                    <a href="estados.php" id="arrow-back"><i class='bx bx-arrow-back'></i></a>
+                    <a href="usuarios.php" id="arrow-back"><i class='bx bx-arrow-back'></i></a>
                 </div>
                 <div class="col-3"></div>
                 <div class="col-7">

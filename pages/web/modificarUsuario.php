@@ -24,8 +24,8 @@
 
     <title>Modificar perfil</title>
     <link rel="stylesheet" type="text/css" href="../../css/general/bootstrap.min.css">
-    <link rel="stylesheet" href="../../css/general/nuevo-editar-hormiga.css">    
-    
+    <link rel="stylesheet" href="../../css/general/nuevo-editar-hormiga.css">  
+    <link rel="stylesheet" href="../../css/general/modificar-usuario.css">  
    
     <?php
         include("../../widgets/web/header-pt2-without-bootstrap.php");

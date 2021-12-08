@@ -18,7 +18,7 @@
     
     //responder con la imagen
     $c =connectDB();
-    $qry = "select photo,type_photo from users where id_user = ".$_GET["idUser"];
+    $qry = "select photo,type_photo from users where id_user=".$_GET["idUser"];
     $rs= mysqli_query($c,$qry);
     
     //transform the request in an image

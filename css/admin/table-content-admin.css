@@ -1,11 +1,13 @@
 @import url(../general/root.css);
 .table{
+    font-size: 25px;
+    color: var(--blue-medium);
     width: 100%;
     text-align: center;
 }
 .table thead tr{
     background-color: var(--blue-cream);
-    color: var(--sand);
+    color: var(--blue-medium);
     text-align: left;
     font-weight: bold;
     border-bottom: 2px solid var(--blue-strong);
@@ -15,19 +17,22 @@
 .table td{
     align-items: center;
     padding: 12px 15px;
+
+
 }
 
 .table td{
+    
     max-width: 225px;
 }
 
 .table tbody tr{
     background-color: #f3f3f3 ;
-    border-bottom: 2px solid var(--blue-strong);
+    border-bottom: 2px solid var(--blue-cream);
 }
 
 .table tbody tr:last-of-type{
-    border-bottom: 2px solid #009879;
+    border-bottom: 2px solid var(--blue-medium);
 }
 
 .img-table{
