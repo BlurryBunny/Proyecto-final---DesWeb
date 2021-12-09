@@ -84,7 +84,7 @@
                                                 echo "<input type='hidden' value=". $datos["id_user"].   " name='txtIdUser'>";
                                                 echo "<td><input type='text' name='txtName' id='txtName' class='form-control' placeholder='nombre usuario' aria-label='Titulo' aria-describedby='basic-addon1'value= '".$datos["name"]. "'></td>";
                                                 echo "<td><input type='text' name='txtEmail' id='txtEmail' class='form-control' placeholder='user@user.com' aria-label='Titulo' aria-describedby='basic-addon1'value= '".$datos["email"]. "'></td>";
-                                                echo "<td><input type='text' name='txtContraseña' id='txtContraseña' class='form-control' placeholder='1234' aria-label='Titulo' aria-describedby='basic-addon1'value= '".$datos["password"]. "'></td>";
+                                                echo "<td><input type='text' name='txtPassword' id='txtPassword' class='form-control' placeholder='1234' aria-label='Titulo' aria-describedby='basic-addon1'value= '".$datos["password"]. "'></td>";
 
                                                 if($datos["rol"]!=""){
                                                     echo "<td>";
@@ -113,7 +113,7 @@
 
                                                 echo "<td>";
                                                 if($datos["photo"]!="" && $datos["type_photo"]!=""){
-                                                    echo " <img class='img-thumbnail rounded' width=200 id='postPhoto' src='../general/show-photo-user.php?idUser=".$datos["id_user"]."' alt='".$datos['name']."-photo'/>";
+                                                    echo " <img class='img-thumbnail rounded' width=200 id='profilePhoto' src='../general/show-photo-user.php?idUser=".$datos["id_user"]."' alt='".$datos['name']."-photo'/>";
                                                 }else{
                                                     echo "<i class='bx bx-user-circle' width =200></i>";
                                                 }

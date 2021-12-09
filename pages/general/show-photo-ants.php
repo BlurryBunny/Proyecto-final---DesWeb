@@ -7,9 +7,9 @@
     }
 
     $rol_user = get_user_rol($_SESSION["idU"]);
-    if($rol_user != "Administrador"){
-        header("location:".$ruta."pages/general/logIn.php?err=4");//no se ha iniciado sesion todavia
-    }
+    // if($rol_user != "Administrador"){
+    //     header("location:".$ruta."pages/general/logIn.php?err=4");//no se ha iniciado sesion todavia
+    // }
 
     if(!isset($_GET["idAnt"]) || $_GET["idAnt"] == ""){
         header("location:".$ruta."pages/admin/publicaciones.php?err=3");

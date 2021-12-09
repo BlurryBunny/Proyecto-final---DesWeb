@@ -46,7 +46,7 @@
                         <?php
 
                         if($info_user["type_photo"]!="" && $info_user["photo"]!=""){
-                            echo " <img class='img-thumbnail rounded' width=200 id='postPhoto' src='../general/show-photo-user.php?idUser=".$_SESSION["idU"]."' alt='".$info_user['name']."-photo'/>";
+                            echo " <img class='img-thumbnail rounded' width=200 id='postPhoto' src='../general/show-photo-user.php?idUser=".$info_user["id_user"]."' alt='".$info_user['name']."-photo'/>";
                         }else{
                             echo "<i class='bx bx-user-circle' id='img-user' ></i>";
                         }

@@ -7,15 +7,14 @@
     }
 
     $rol_user = get_user_rol($_SESSION["idU"]);
-    if($rol_user != "Administrador"){
-        header("location:".$ruta."pages/general/logIn.php?err=4");//no se ha iniciado sesion todavia
-    }
+    // if($rol_user != "Administrador"){
+    //     header("location:".$ruta."pages/general/logIn.php?err=4");//no se ha iniciado sesion todavia
+    // }
 
     if(!isset($_GET["idUser"]) || $_GET["idUser"] == ""){
         header("location:".$ruta."pages/admin/usuarios.php?err=3");
     }
 
-    
     //responder con la imagen
     $c =connectDB();
     $qry = "select photo,type_photo from users where id_user=".$_GET["idUser"];

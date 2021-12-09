@@ -16,23 +16,23 @@
                   <select class="form-select form-select-lg mb-3" id="typePost" name="typePost" aria-label=".form-select-lg example">
                       <?php
                         if(isset($_POST["typePost"]) && $_POST["typePost"]!=""){
-                            if($_POST["typePost"] == "Publicaciones"){
+                            if($_POST["typePost"] == "Foro"){
                                 echo "
-                                <option selected value='Publicaciones'>Publicaciones</option>
-                                <option value='Comentarios'>Comentarios</option>";
-                            }else if($_POST["typePost"] == "Comentarios"){
+                                <option  selected value='Foro'>Foro</option>
+                                <option  value='Cuidados basicos'>Cuidados basicos</option>";
+                            }else if($_POST["typePost"] == "Cuidados basicos"){
                                 echo "
-                                <option value='Publicaciones'>Publicaciones</option>
-                                <option selected value='Comentarios'>Comentarios</option>";
+                                <option  value='Foro'>Foro</option>
+                                <option selected value='Cuidados basicos'>Cuidados basicos</option>";
                             }else{
-                                echo "<option selected disabled>...</option>
-                                <option value='Publicaciones'>Publicaciones</option>
-                                <option value='Comentarios'>Comentarios</option>";
+                                echo "<option selected disabled>Sección</option>
+                                <option value='Foro'>Foro</option>
+                                <option value='Cuidados basicos'>Cuidados basicos</option>";
                             }
                         }else{
-                            echo "<option selected disabled>...</option>
-                            <option value='Publicaciones'>Publicaciones</option>
-                            <option value='Comentarios'>Comentarios</option>";
+                            echo "<option selected disabled>Sección</option>
+                            <option value='Foro'>Foro</option>
+                            <option value='Cuidados basicos'>Cuidados basicos</option>";
                         }
                       ?>
                         
