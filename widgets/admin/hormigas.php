@@ -75,7 +75,10 @@
                                             echo "<tr>";
                                             echo "<td><span class='title-table'>".$datos["id_ant"]."</span></td>";
                                             echo "<td><span class='title-table'>".$datos["name"]."</span></td>";
-                                            echo "<td><img src='../general/show-photo-ants.php?idAnt=".$datos["id_ant"]."' alt='img-hormiga' class='img-table'></td>";
+                                            echo "<td>
+                                                <div class = 'container-img' style= 'height:100px; width:100px; background-image :url(../general/show-photo-ants.php?idAnt=".$datos["id_ant"]."); background-size:cover; background-position:center center;'>
+                                                </div>
+                                                </td>";
                                             echo "<td><span class='title-table'>".$datos["family"]."</span></td>";
                                             echo "<td><span class='title-table'>
                                                 <a href= 'new-edit-hormiga.php?idAnt=".$datos["id_ant"]."' class='btn-action'><i class='bx bx-edit' ></i></a>

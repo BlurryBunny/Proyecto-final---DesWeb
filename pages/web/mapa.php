@@ -31,6 +31,7 @@
         include("../../widgets/web/map.php");
         include("../../widgets/web/footer.php");
         include("../../widgets/web/modal.php");
+        include("../../widgets/web/modal-info.php");
         
     ?>
     

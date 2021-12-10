@@ -1,18 +1,3 @@
-<!-- modal pop up -->
-<!-- <div class="modal" id="modal">
-            <div class="modal-header">
-                <div class="title">Example Modal</div>
-                <button data-close-button class="close-button">&times;</button>
-            </div>
-            <div class="modal-body">
-
-                if
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo possimus laborum odit laudantium rerum quidem architecto odio harum corrupti excepturi quia sint, aspernatur dolorem error corporis, quisquam cum deserunt qui!
-            </div>
-        </div>
-
-<div id="overlay"></div> -->
-
 <?php
 if(isset($_GET["state"]) && $_GET["state"]!=""){
     echo "<div class='container myModal'>";
@@ -46,14 +31,14 @@ if(isset($_GET["state"]) && $_GET["state"]!=""){
                 mysqli_close($c);
                 if(mysqli_num_rows($rs2)>0){
                     while($ant_data = mysqli_fetch_array($rs2)){
-                        echo "<div class='row pt-5 ' id='row-body'>
-                        <div class='container'>
+                        echo "<div class='row p-5 ' id='row-body'>
+                        <div class='container' >
                             <div class='row'>
                                 <div class='col-1'></div>
-                                <div class='col-10' id='container-content'>
+                                <div class='col-10' >
                                     
                                         <div class='row'>
-                                            <div class='col-8 pt-3 pb-3 pl-3 pr-3' id='container-post'>";
+                                            <div class='col-8 pt-3 pb-3 pl-3 pr-3' id='container-content'>";
                                                 
                                                 echo "<h1 class='display-4 text-capitalize'>".$ant_data['name']."</h1>";
                                                 echo "<span class='mt-3' id='family-txt'>Familia: "
@@ -68,7 +53,8 @@ if(isset($_GET["state"]) && $_GET["state"]!=""){
                                             echo "</div>
                                             <div class='col-4 align-content-center'>";
                                             
-                                                echo "<img  width=90%; height: 80%; id='postPhoto' src='../general/show-photo-ants.php?idAnt=".$ant_data['id_ant']."' alt='".$ant_data['name']."'>";
+                                                echo "<div class = 'container-img' style= 'height:200px; width:200px; background-image :url(../general/show-photo-ants.php?idAnt=".$ant_data["id_ant"]."); background-size:cover; background-position:center center;'>
+                                                </div>";
                                                 
                                             echo "</div>
                                             

@@ -32,6 +32,13 @@
     font-weight: bold;
 }
 
+#container-content-text{
+    max-height: 80%;
+    
+    align-items: center;
+    overflow-y: hidden;
+}
+
 .modal-header .close-button{
     cursor: pointer;
     border: none;
@@ -75,8 +82,14 @@
     border : 5px solid var(--blue-medium);
     border-style: dotted;
     color: var(--blue-medium);
+    overflow-y: auto;
 }
-
+#container-content{
+    max-height: 250px;
+    
+    align-items: center;
+    overflow-y: hidden;
+}
 #close-button{
     text-decoration: none;
     font-size: 50px;

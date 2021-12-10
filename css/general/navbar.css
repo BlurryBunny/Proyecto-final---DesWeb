@@ -36,8 +36,7 @@
 .nav-link:hover{
     background-color: var(--blue-cream);
     color: var(--blue-strong);
-    font-size: 32px;
-    transition: all 1s ease-in-out;
+    /* font-size: 32px; */
 }
 
 .nav-link.active{

@@ -56,10 +56,9 @@
                                         </span>";
 
                                     echo "</div>
-                                    <div class='col-4 align-content-center'>";
-                                    
-                                        echo "<img  width=90%; height: 80%; id='postPhoto' src='../general/show-photo-post.php?idPost=".$info_post['id_post']."' alt='".$info_post['title']."'>";
-                                        
+                                    <div class='col-4 align-items-center'>";
+                                        echo "<div class = 'container-img' style= 'height:400px; width:400px; background-image :url(../general/show-photo-post.php?idPost=".$info_post['id_post']."); background-size:cover; background-position:center center; border-radius:25px;'>
+                                        </div>";                                        
                                     echo "</div>
                                     
                                 </div>

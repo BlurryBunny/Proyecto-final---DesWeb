@@ -18,11 +18,11 @@
                                 <div class="row">
                                         <div class="col-1"></div>
                                         <div class="col-1" >
-                                                <span class="span-info mr-2">Creditos</span>
+                                                <a href="?credits=true" id='tag-openModal'><span class="span-info ml-2">Creditos</span></a>
                                         </div>
                                         
                                         <div class="col-2">
-                                                <span class="span-info ml-2">Politica de privacidad</span>
+                                                <a href="?privacy=true " id='tag-openModal'><span class="span-info ml-2">Politica de privacidad</span></a>
                                         </div>
                                         <div class="col-4"></div>
                                         <div class="col-1" id="icons-info">

@@ -26,15 +26,16 @@
 
 .span-info{
     padding-left: 25px;
-    transition: 0.4s all ease;
+
     font-size: 25px;
     color: var(--blue-medium);
     font-weight: normal;
 }
-
+#tag-openModal{
+    text-decoration: none;
+}
 .span-info:hover{
-    font-size: 30px;
-    font-weight: bold;
+
     color: var(--blue-strong);
 }
 
@@ -42,5 +43,6 @@
 footer{
     border-top: 5px solid var(--blue-medium);
     height: 100px;
+    width: 100%;
     background-color: var(--blue-cream);
 }

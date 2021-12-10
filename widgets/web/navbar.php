@@ -1,7 +1,4 @@
-
-
-
-    <nav class="navbar navbar-expand-md navbar-light bg-light">
+<nav class="navbar navbar-expand-md navbar-light bg-light">
 
     <div class="container-fluid">
         <div class="col-3">
@@ -46,4 +43,4 @@
             </div>
         </div>
     </div>
-    </nav>
+</nav>

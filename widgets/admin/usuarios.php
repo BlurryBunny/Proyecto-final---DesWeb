@@ -49,8 +49,8 @@
                     <div class="col-10">
                         <table class="table table-striped">
                             <thead>
-                                <tr>
-                                    <th><span class="title-table">ID</span></td>
+                                <tr >
+                                    <th ><span class="title-table">ID</span></td>
                                     <th><span class="title-table">Nombre</span></td>
                                     <th><span class="title-table">Email</span></td>
                                     <th><span class="title-table">Contraseña</span></td>
@@ -111,13 +111,15 @@
                                                 }
                                                 echo "</td>";
 
-                                                echo "<td>";
+                                                echo "<div style='display:flex; justify-content:center;'><td >";
                                                 if($datos["photo"]!="" && $datos["type_photo"]!=""){
-                                                    echo " <img class='img-thumbnail rounded' width=200 id='profilePhoto' src='../general/show-photo-user.php?idUser=".$datos["id_user"]."' alt='".$datos['name']."-photo'/>";
+                                                    echo " <div class = 'container-img' style= 'height:100px; width:100px; background-image :url(../general/show-photo-user.php?idUser=".$datos["id_user"]."); background-size:cover; background-position:center center; '>
+                                                    </div>";
                                                 }else{
-                                                    echo "<i class='bx bx-user-circle' width =200></i>";
+                                                    echo " <div class = 'container-img' style= 'height:100px; width:100px; background-image :url(../../assets/imgs/user.png); background-size:cover; background-position:center center; align-items:center'>
+                                                    </div>";
                                                 }
-                                                echo "</td>";
+                                                echo "</td></div>";
                                                 
                                                 echo "<td>
                                                         <input type='submit'  id='btn-Publicar' class='btn btn-primary' value= 'Actualizar' >
