@@ -2,12 +2,18 @@
     <form action='../../DB/registerNewRelationStateAnt.php' enctype='multipart/form-data' class='form-post' method='post' onsubmit="return valida_Nueva_Relacion_HormigaEstado()">
 
     <!-- titulo -->
-    <div class="row m-5 ">
-        <div class="col-3"></div>
-        <div class="col-6"><h3>Crear relacion de hormiga en estado</h3></div>
-        <div class="col-3"></div>
-    </div>
+    
+    <div class="d-flex row-flex text-center m-5">
+            
+            <div id="my-row-complete">
+            <h2>Crear relacion de hormiga en estado</h2>
+            </div>
+            
+            
+        </div>
     <!-- contenido -->
+    <!-- buttons to fill the form -->
+   
     <div class ="row m-5">
 
         <div class="col-1"></div>
@@ -93,6 +99,7 @@
                     <div class="col-1"></div>
 
                     <div class="col-10">
+                    <div class="mytable">
                         <table class="table table-striped">
                             <thead>
                                 <tr>
@@ -196,59 +203,7 @@
 
                                                 $states_view[]= $datos_state["id_state"];
 
-                                            }
-
-                                        // while($datos = mysqli_fetch_array($rs)){
-
-                                        //     $qry2= "select * from states where id_state=".$datos["id_state"];
-                                        //     $qry3= "select * from ants where id_ant=".$datos["id_ant"];
-                                        //     $rs_state = mysqli_query($c,$qry2);
-                                        //     $rs_ant = mysqli_query($c,$qry3);
-                                        //     // ponemos el estado en una row
-
-                                        //     //revisamos si existe alguna row
-                                        //     if(mysqli_num_rows($rs_state)>0){
-                                        //         //extraemos cada row
-                                        //         while($datos_state = mysqli_fetch_array($rs_state)){
-                                        //             echo "<tr>";
-                                        //             echo "<td><span class='title-table'>".$datos_state["id_state"]."</span></td>";
-                                        //             echo "<td><span class='title-table'>".$datos_state["name"]." | ".$datos_state["short_name"]."</span></td>";
-
-                                        //             //revisamos si existe alguna row
-                                        //             if(mysqli_num_rows($rs_ant)>0){
-
-                                        //                 //insertamos el nombre
-                                        //                 echo "<td>";
-                                        //                 //extraemos cada row
-                                        //                 //ponemos todas las hormigas que hay en el estado 
-                                        //                 while($datos_ant = mysqli_fetch_array($rs_ant)){
-                                        //                     echo "<span class='title-table'>".$datos_ant["name"]."</span><br>";
-                                        //                 }
-                                        //                 echo "</td>";
-
-                                        //                 $rs_ant = mysqli_query($c,$qry3);
-                                        //                 if(mysqli_num_rows($rs_ant)>0){
-                                        //                     //insertamos familia y subfamilia
-                                        //                     echo "<td>";
-                                        //                     //extraemos cada row
-                                        //                     //ponemos todas las hormigas que hay en el estado 
-                                        //                     while($datos_ant = mysqli_fetch_array($rs_ant)){
-                                        //                         echo "<span>Hola</span>";
-                                        //                         echo "<span class='title-table'>".$datos_ant["family"]." | ".$datos_ant["subfamily"]."</span><br>";
-                                        //                     }
-                                                            
-                                        //                     echo "</td>";
-                                        //                 }
-                                        //             }else{
-                                        //                 echo "<td>No hay hormigas relacionadas</td>";
-                                        //             }
-
-                                        //         }
-                                        //     }else{
-                                        //         echo "<td>No hay registro de estados</td>";
-                                        //     }
-                                        // }
-                                        
+                                            } 
                                         echo "</tr>";
                                     }
 
@@ -266,6 +221,7 @@
                                
                             </tbody>
                         </table>
+                    </div>
                     </div>
 
                     <div class="col-1"></div>

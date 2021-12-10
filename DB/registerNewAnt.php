@@ -62,7 +62,7 @@ if( isset($_POST["txtName"])            &&
 
                 $date = date("Y/m/d"); // we need to save the date just in case
                 // Nota, te quedaste insertando la imagen que ya no tiene llave, una vez que la llave esta guardada 
-                $qry = "insert into ants(id_user,name,family,subfamily,alimentation,care,features,date_update,photo_ant,photo_type) values(" .$_SESSION["idU"]. ",'$txtName','$txtFamily','$txtSubfamily','$txtAlimentation','$txtCare','$txtContent','$date','$imagen','$tipo')";
+                $qry = "insert into ants(id_user,name,family,subfamily,alimentation,care,features,date_update,photo,type_photo) values(" .$_SESSION["idU"]. ",'$txtName','$txtFamily','$txtSubfamily','$txtAlimentation','$txtCare','$txtContent','$date','$imagen','$tipo')";
                 if(!mysqli_query($c,$qry)){
                     // echo "<h1>Error</h1>";
                     header("location:".$ruta."pages/admin/hormigas.php?newAnt=false"); // todo correcto return to ant

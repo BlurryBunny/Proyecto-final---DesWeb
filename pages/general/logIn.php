@@ -11,7 +11,7 @@
 
         //widgets include
         include("../../widgets/web/header-pt1.php");
-    ?>`
+    ?>
 
     <link rel="stylesheet" type="text/css" href="../../css/general/logIn.css">
     <link rel="stylesheet" type="text/css" href="../../css/general/footer.css">

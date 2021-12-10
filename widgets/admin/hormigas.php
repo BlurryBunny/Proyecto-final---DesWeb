@@ -49,6 +49,7 @@
                     <div class="col-1"></div>
   
                     <div class="col-10">
+                    <div class="mytable">
                         <table class="table table-striped">
                           <thead>
                             <tr>
@@ -99,6 +100,7 @@
                              
                           </tbody>
                         </table>
+                    </div>
                     </div>
   
                     <div class="col-1"></div>

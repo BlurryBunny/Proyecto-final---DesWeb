@@ -87,7 +87,8 @@
                   <div class="col-1"></div>
 
                   <div class="col-10">
-                      <table class="table table-striped">
+                      <div class="mytable">
+                      <table class="table table-striped" >
                         <thead>
                           <tr>
                               <th><span class="title-table">ID</span></td>
@@ -155,6 +156,7 @@
                                 ?>
                         </tbody>
                       </table>
+                      </div>
                   </div>
 
                   <div class="col-1"></div>
