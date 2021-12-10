@@ -17,12 +17,18 @@ if(!isset($_GET["idState"])){
 
 if($_GET["idState"]!=""){
     $c = connectDB();
-    $qry = "delete from states where id_state=" .$_GET["idState"];
+    $qryRel = "delete from ants_in_states where id_state=".$_GET["idState"];
+    if(mysqli_query($c,$qryRel)){
+        $qry = "delete from states where id_state=" .$_GET["idState"];
     
-    if(mysqli_query($c,$qry)){
-        header("location:".$ruta."pages/admin/estados.php?delState=true");//no se ha iniciado sesion todavia
+        if(mysqli_query($c,$qry)){
+            header("location:".$ruta."pages/admin/estados.php?delState=true");//no se ha iniciado sesion todavia
+        }
+    
+        header("location:".$ruta."pages/admin/estados.php?delState=false");//no se ha iniciado sesion todavia
+    }else{
+        header("location:".$ruta."pages/admin/estados.php?delState=false");//no se ha iniciado sesion todavia
     }
-
-    header("location:".$ruta."pages/admin/estados.php?delState=false");//no se ha iniciado sesion todavia
+   
 }
 ?>

@@ -1,4 +1,15 @@
 <?php
+$rutaReturn = 'mapa.php';
+if(isset($_SESSION["idU"]) && $_SESSION["idU"]!=""){
+    $rol_usr = get_user_rol($_SESSION["idU"]);
+    
+    
+    if($rol_usr == "Administrador"){
+       $rutaReturn = 'dashboard.php';
+    }
+}
+
+
 if(isset($_GET["state"]) && $_GET["state"]!=""){
     echo "<div class='container myModal'>";
     
@@ -14,7 +25,7 @@ if(isset($_GET["state"]) && $_GET["state"]!=""){
                 <div class = 'col-1'></div> 
                 <div class = 'col-5'><h2>Hormigas en ".$info_state["name"]."</h2> </div>  
                 <div class = 'col-3'></div>         
-                <div class = 'col-2'><a href='mapa.php' id='close-button'><i class='bx bx-arrow-back'></i></a></div> 
+                <div class = 'col-2'><a href='".$rutaReturn."' id='close-button'><i class='bx bx-arrow-back'></i></a></div> 
                 <div class = 'col-1'></div> 
             </div>
             ";

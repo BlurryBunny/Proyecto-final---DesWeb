@@ -57,7 +57,7 @@
                                         </span>";
 
                                     echo "</div>
-                                    <div class='col-4 align-content-center'>";
+                                    <div class='col-4 align-content-center p-5'>";
                                     
                                         echo "<img  width=90%; height: 80%; id='postPhoto' src='../general/show-photo-post.php?idPost=".$info_post['id_post']."' alt='".$info_post['title']."'>";
                                         

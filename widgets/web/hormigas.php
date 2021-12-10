@@ -127,7 +127,7 @@
         </div>
 
         <div class="d-flex  text-capitalize m-4  ">
-            <div class="row text-center">
+            <div class="row p-4 text-left">
                 <span><?=$info_ant["features"]?></span>
             </div>
         </div>
