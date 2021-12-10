@@ -15,7 +15,7 @@
 
     include("../../widgets/web/header-pt1.php");
 ?>
-    <title>Mapa</title>
+    <title>Foro</title>
     <!-- include the ccs that we need to use between header -->
     <!-- <link rel="stylesheet" href="../../css/general/map.css"> -->
     <link rel="stylesheet" href="../../css/general/navbar.css">

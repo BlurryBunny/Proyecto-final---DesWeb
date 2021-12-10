@@ -86,21 +86,31 @@
                                                 $c = connectDB();
                                                 $qry = "select * from comments where id_post=".$info_post['id_post'];
                                                 $res = mysqli_query($c, $qry);
+                                                
 
                                                 if(mysqli_num_rows($res)>0){
                                                     while($comment_for_post = mysqli_fetch_array($res)){
-                                                        echo "<li class='list-group-item mt-4 pb-1' >  
-                                                            <div class='row'>
-                                                                <div class='col-10'>
-                                                                    <p>".$comment_for_post['content']."</p>
+                                                        
+                                                        $qry2 = "select * from users where id_user=".$comment_for_post['id_user'];
+                                                        $res2 = mysqli_query($c, $qry2);
+                                                            if(mysqli_num_rows($res2)>0){
+                                                                $info_user = mysqli_fetch_array($res2);
+                                                                echo "<li class='list-group-item mt-4 pb-1' >  
+                                                                <div class='row'>
+                                                                    <div class='col-2'>
+                                                                        <p>".$info_user['name']."</p>
+                                                                    </div>
+                                                                    <div class='col-8'>
+                                                                        <p>".$comment_for_post['content']."</p>
+                                                                    </div>
+                                                                    <div class='col-2'>
+                                                                        <p>".$comment_for_post['date']."</p>
+                                                                    </div>
+                                                                            
                                                                 </div>
-                                                            <div class='col-2'>
-                                                                    <p>".$comment_for_post['date']."</p>
-                                                            </div>
-                                                                        
-                                                            </div>
-                                                            </li>
-                                                            ";
+                                                                </li>
+                                                                ";
+                                                            }
                                                         }
                                                 }else{
                                                         echo "<li class='list-group-item mt-4 pb-1'><p>No hay comentarios todavia ... </p></li>";

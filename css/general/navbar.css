@@ -2,6 +2,7 @@
 
 .navbar{
     font-family: "Lithos Pro Regular";
+    border-bottom: 5px solid var(--blue-medium);
 }
 .container-fluid{
     position: absolute;

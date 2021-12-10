@@ -68,7 +68,7 @@ if(isset($_GET["state"]) && $_GET["state"]!=""){
                                             echo "</div>
                                             <div class='col-4 align-content-center'>";
                                             
-                                                echo "<img  width=90%; height: 80%; id='postPhoto' src='../general/show-photo-ant.php?idAnt=".$ant_data['id_ant']."' alt='".$ant_data['name']."'>";
+                                                echo "<img  width=90%; height: 80%; id='postPhoto' src='../general/show-photo-ants.php?idAnt=".$ant_data['id_ant']."' alt='".$ant_data['name']."'>";
                                                 
                                             echo "</div>
                                             
