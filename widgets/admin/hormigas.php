@@ -5,7 +5,7 @@
                 <div class="row m-5">
                     <div class="col-xs-1 col-2"></div>
                     <div class=" col-xs-8 col-6">
-                        <h2 id="only-title-page">Lista de estados en mapa</h2>
+                        <h2 id="only-title-page">Lista de hormigas</h2>
                     </div>
                     <div class="col-xs-3 col-2">
                         <a href="new-edit-hormiga.php" class="btn btn-primary" id="btn-add-post">
